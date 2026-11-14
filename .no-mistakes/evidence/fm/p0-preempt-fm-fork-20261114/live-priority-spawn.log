@@ -1,0 +1,85 @@
+/tmp/fm-lab.qeXSgE
+warning: You appear to have cloned an empty repository.
+
+=== Full-capacity ordinary spawn should defer ===
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /tmp/fm-lab.qeXSgE
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  down 1s.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+deferred: project project admits 1 worker(s) at once on this machine (/tmp/fm-lab.qeXSgE/config/project-capacity) and 1 already hold a place (ordinary); task ordinary-proof was not launched and its backlog item stays queued - dispatch it again once one of them records its ready PR or is cleaned up
+
+=== P0 should receive its own real Codex worker while ordinary lane continues ===
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /tmp/fm-lab.qeXSgE
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s; down 3s) - full banner already printed this episode.
+warning: /tmp/fm-lab.qeXSgE/data/p0-proof/launch-brief.md records no ship branch; defaulting to legacy branch fm/p0-proof
+spawned p0-proof harness=codex kind=ship mode=no-mistakes yolo=off window=primary:fm-p0-proof worktree=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-spawn/pool/.treehouse/project-67d3df/1/project
+spawn_exit=0
+fm-ordinary 0 bash
+fm-p0-proof 0 bash
+window=primary:fm-p0-proof
+tmux_socket=/tmp/fm-lab.qeXSgE/tmux/tmux-1000/fm-lab
+tmux_server_pid=3375650
+tmux_server_identity=linux-starttime=577838819 cmdline-hex=746d7578002d4c00666d2d6c6162002d66002f6465762f6e756c6c006e65772d73657373696f6e002d64002d73007072696d617279002d7800313230002d79003430002d6e00666d2d6f7264696e617279002d63002f686f6d652f6564792f2e6e6f2d6d697374616b65732f776f726b74726565732f3266633464353632383835372f30314d37444759505050435735325a344133394b3941424b4248007768696c65203a3b20646f2064617465202b2573203e3e20272f746d702f666d2d6c61622e7165585367452f70726f6772657373273b20736c65657020313b20646f6e6500
+tmux_window_id=@1
+endpoint_task_id=p0-proof
+worktree=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-spawn/pool/.treehouse/project-67d3df/1/project
+project=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-spawn/project
+harness=codex
+approval_mode=bypass
+kind=ship
+priority=0
+mode=no-mistakes
+yolo=off
+branch=fm/p0-proof
+tasktmp=/tmp/fm-p0-proof
+model=default
+effort=default
+spawn_gen=s1794677061.3377901.30577
+
+  Folder access
+  /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-spawn/pool/.treehouse/project-67d3df/
+  1/project
+
+  Note: You’re in a subdirectory of a Git project. Trusting will apply to the repository root:
+  /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-spawn/project
+
+  Trust this folder? Codex can read, edit, and run files here, subject to your permission settings. Folder settings
+  can run code automatically, even without a model request. Continue only if you trust these files. Your trust
+  decision will be saved.
+
+› 1. Trust and continue
+  2. Quit
+
+  enter continue · esc quit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=== Ordinary progress continued ===
+14 /tmp/fm-lab.qeXSgE/progress

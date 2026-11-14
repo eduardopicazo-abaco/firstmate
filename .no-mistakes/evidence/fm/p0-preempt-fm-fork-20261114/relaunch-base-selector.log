@@ -1,0 +1,8 @@
+1..1
+fatal: repository '/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-baseline' does not exist
+not ok - could not clone a firstmate home for rl-seed1
+mkdir: cannot create directory ‘/user-home’: Permission denied
+mkdir: cannot create directory ‘/user-home’: Permission denied
+.test-baseline/tests/fm-control-relaunch.test.sh: line 302: /user-home/Library/Keychains/login.keychain-db: No such file or directory
+not ok - an unchanged seeded home must be allowed to leave Claude
+error: state dir '/home/state' is missing; fm-control cannot resolve tasks for FM_HOME '/home': expected exit 0, got 1

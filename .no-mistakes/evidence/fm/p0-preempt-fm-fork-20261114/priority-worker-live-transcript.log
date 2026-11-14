@@ -1,0 +1,805 @@
++ set -euo pipefail
+++ dirname tests/fm-priority-worker-live-e2e.test.sh
++ . tests/fixtures.sh
++++ dirname tests/fixtures.sh
+++ . tests/lib.sh
++++ '[' -n '' ']'
++++ FM_TEST_LIB_SOURCED=1
++++ umask 022
+++++ dirname tests/lib.sh
++++ . tests/git-config-helpers.sh
+++++ export GIT_CONFIG_GLOBAL=/dev/null GIT_CONFIG_NOSYSTEM=1
+++++ GIT_CONFIG_GLOBAL=/dev/null
+++++ GIT_CONFIG_NOSYSTEM=1
+++++ unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_COMMON_DIR
++++ export FM_GATE_REFUSE_BYPASS=1
++++ FM_GATE_REFUSE_BYPASS=1
++++ export FM_TEST_SEAM=1
++++ FM_TEST_SEAM=1
++++ export FM_HEARTBEAT_BIN=true
++++ FM_HEARTBEAT_BIN=true
++++ export FM_DISK_ALARM_VOLUME=/nonexistent/fm-test-disk-alarm-volume
++++ FM_DISK_ALARM_VOLUME=/nonexistent/fm-test-disk-alarm-volume
++++ unset FM_TASK_ID
++++ unset TASKS_AXI_FILE TASKS_AXI_BACKEND
++++ unset REX_SESSION REX_BLOCK
++++ unset ORCA_TERMINAL_HANDLE
++++++ dirname tests/lib.sh
+++++ cd tests/..
+++++ pwd
++++ ROOT=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH
+++++ fm_test_tmpdir
+++++ local base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp physical
+++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
+++++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp ']'
+++++ case "$base" in
++++++ CDPATH=
++++++ cd -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
++++++ pwd -P
+++++ physical=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
+++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
+++++ '[' -e /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.git ']'
+++++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
++++ FM_TEST_TMPDIR=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
++++ FM_TEST_CLEANUP_DIRS=()
+++++ mktemp /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-cleanup.1669239.XXXXXX
++++ FM_TEST_CLEANUP_REGISTRY=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-cleanup.1669239.7GVb9A
+++++ fm_test_pid_identity 1669239
+++++ local pid=1669239
+++++ FM_STATE_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
+++++ bash -c '. "$1"; fm_pid_identity "$2"' _ /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-wake-lib.sh 1669239
++++ FM_TEST_OWNER_IDENTITY='linux-starttime=578039412 cmdline-hex=62617368002d780074657374732f666d2d7072696f726974792d776f726b65722d6c6976652d6532652e746573742e736800'
+++++ mktemp /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-procevent.1669239.XXXXXX
++++ FM_TEST_PROCEVENT_REGISTRY=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-procevent.1669239.o6zG72
+++++ mktemp /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-watcher.1669239.XXXXXX
++++ FM_TEST_WATCHER_REGISTRY=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-watcher.1669239.mk4rmS
++++ FM_TEST_STUB_MAX_BLOCK_SECONDS=120
++++ export FM_TEST_STUB_MAX_BLOCK_SECONDS
++++ FM_TEST_SUITE_PID=1669239
++++ export FM_TEST_SUITE_PID
++++ trap fm_test_cleanup EXIT
++++ trap 'fm_test_cleanup; exit 130' INT
++++ trap 'fm_test_cleanup; exit 143' TERM
++++ trap 'fm_test_cleanup; exit 129' HUP
++++ trap 'fm_test_cleanup; exit 131' QUIT
++++ FM_TEST_ORPHAN_MAX_AGE_SECONDS=3600
++++ '[' 1 '!=' 1 ']'
+++ '[' -n '' ']'
+++ FM_TEST_FIXTURES_SOURCED=1
+++ export FM_TEST_NO_MISTAKES_VERSION=1.46.0
+++ FM_TEST_NO_MISTAKES_VERSION=1.46.0
+++ export 'FM_TEST_NO_MISTAKES_FAKE_VERSION=no-mistakes version v1.46.0 (fake)'
+++ FM_TEST_NO_MISTAKES_FAKE_VERSION='no-mistakes version v1.46.0 (fake)'
+++ export 'FM_TEST_NO_MISTAKES_FAKE_VERSION_TS=no-mistakes version v1.46.0 (fake) 2026-06-27T00:02:18Z'
+++ FM_TEST_NO_MISTAKES_FAKE_VERSION_TS='no-mistakes version v1.46.0 (fake) 2026-06-27T00:02:18Z'
+++ export FM_TEST_GH_AXI_VERSION=0.1.29
+++ FM_TEST_GH_AXI_VERSION=0.1.29
++ fm_live_gate default-on FM_PRIORITY_WORKER_LIVE_E2E tmux python3 tasks-axi
++ local policy=default-on vars=FM_PRIORITY_WORKER_LIVE_E2E
++ shift 2
++ local var value rest primary requested=0 disabled_by= tool
++ var_list=()
++ local -a var_list
++ case "$policy" in
++ rest=FM_PRIORITY_WORKER_LIVE_E2E
++ '[' -n FM_PRIORITY_WORKER_LIVE_E2E ']'
++ var=FM_PRIORITY_WORKER_LIVE_E2E
++ '[' FM_PRIORITY_WORKER_LIVE_E2E = FM_PRIORITY_WORKER_LIVE_E2E ']'
++ rest=
++ '[' -n FM_PRIORITY_WORKER_LIVE_E2E ']'
++ var_list+=("$var")
++ '[' -n '' ']'
++ '[' 1 -gt 0 ']'
++ primary=FM_PRIORITY_WORKER_LIVE_E2E
++ for var in "${var_list[@]}"
++ value=
++ case "$value" in
++ '[' 0 -eq 0 ']'
++ '[' -n '' ']'
++ case "${FM_LIVE:-}" in
++ '[' default-on = opt-in ']'
++ for tool in "$@"
++ command -v tmux
++ continue
++ for tool in "$@"
++ command -v python3
++ continue
++ for tool in "$@"
++ command -v tasks-axi
++ continue
++ export DISABLE_AUTOUPDATER=1
++ DISABLE_AUTOUPDATER=1
++ return 0
+++ uname -s
++ '[' Linux = Linux ']'
+++ command -v tmux
++ REAL_TMUX=/usr/bin/tmux
+++ fm_test_tmproot fm-priority-worker
+++ local prefix=fm-priority-worker root tmp_base
++++ fm_test_tmpdir
++++ local base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp physical
++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
++++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp ']'
++++ case "$base" in
+++++ CDPATH=
+++++ cd -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
+++++ pwd -P
++++ physical=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
++++ '[' -e /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.git ']'
++++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
+++ tmp_base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
+++ tmp_base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp
++++ mktemp -d /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.XXXXXX
+++ root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
++++ cd -P -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
++++ pwd -P
+++ root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
+++ printf '%s\n%s\n' 1669239 'linux-starttime=578039412 cmdline-hex=62617368002d780074657374732f666d2d7072696f726974792d776f726b65722d6c6976652d6532652e746573742e736800'
+++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
+++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
++ TMP_ROOT=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
++ mkdir -p /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
++ SOCKET=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.priority-1669239.sock
++ ID=priority-proof-1669239
++ trap cleanup EXIT
++ unset TMUX TMUX_PANE HERDR_ENV HERDR_SESSION HERDR_PANE_ID HERDR_SOCKET_PATH HERDR_TAB_ID HERDR_WORKSPACE_ID
++ unset FM_ROOT_OVERRIDE FM_STATE_OVERRIDE FM_DATA_OVERRIDE FM_CONFIG_OVERRIDE FM_PROJECTS_OVERRIDE
++ mkdir -p /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/fakebin /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/user-home
++ fm_git_worktree /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/worker worker
++ local repo=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project worktree=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/worker branch=worker
++ fm_git_init_commit /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project
++ local dir=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project
++ mkdir -p /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project
++ git -C /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project init -q -b main
+++ basename /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project
++ printf '# %s\n' project
++ git -C /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project add README.md
++ git -C /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project -c 'user.name=Firstmate Tests' -c user.email=tests@example.invalid commit -qm initial
++ fm_git_add_origin /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project.origin.git
++ local repo=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project remote=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project.origin.git remote_abs
++ git clone --quiet --bare /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project.origin.git
+++ cd /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project.origin.git
+++ pwd
++ remote_abs=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project.origin.git
++ git -C /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project remote add origin file:///home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project.origin.git
++ git -C /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project worktree add --quiet -b worker /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/worker
++ fm_test_spawn_home /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home codex
++ local home=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home harness=codex
++ mkdir -p /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/data /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/projects /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/config
++ touch /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/.last-watcher-beat
++ '[' -n codex ']'
++ printf '%s\n' codex
++ fm_test_spawn_brief /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home priority-proof-1669239 'Read README.md and report its value.'
++ local home=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home id=priority-proof-1669239 'intent=Read README.md and report its value.'
++ mkdir -p /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/data/priority-proof-1669239
++ cat
++ printf 'project 1\n'
++ fm_test_tasks_toml /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/.tasks.toml
++ cat
++ printf '# Backlog\n\n## In flight\n\n## Queued\n\n## Done\n'
++ tasks-axi add priority-proof-1669239 'Synthetic dedicated order' --kind ship --priority 0 --file /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/data/backlog.md
++ cat
++ cat
++ cat
++ chmod +x /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/fakebin/codex /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/fakebin/tmux /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/fakebin/treehouse
++ export PATH=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/fakebin:/home/edy/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/edy/.local/bin:/home/edy/.local/bin:/home/edy/.bun/bin:/home/edy/.config/composer/vendor/bin:/home/edy/.local/share/fnm:/home/edy/.local/bin:/home/edy/bin:/home/edy/.codex/tmp/arg0-linux/codex-arg0W1syEe:/home/edy/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/edy/.local/bin:/home/edy/.bun/bin:/home/edy/.config/composer/vendor/bin:/home/edy/.local/share/fnm:/home/edy/.local/bin:/home/edy/google-cloud-sdk/bin:/home/edy/.bun/bin:/home/edy/.local/bin:/home/edy/go/bin:/home/edy/.cargo/bin:/home/edy/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/snap/bin PROOF_ROOT=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh PROOF_CODE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH
++ PATH=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/fakebin:/home/edy/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/edy/.local/bin:/home/edy/.local/bin:/home/edy/.bun/bin:/home/edy/.config/composer/vendor/bin:/home/edy/.local/share/fnm:/home/edy/.local/bin:/home/edy/bin:/home/edy/.codex/tmp/arg0-linux/codex-arg0W1syEe:/home/edy/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/edy/.local/bin:/home/edy/.bun/bin:/home/edy/.config/composer/vendor/bin:/home/edy/.local/share/fnm:/home/edy/.local/bin:/home/edy/google-cloud-sdk/bin:/home/edy/.bun/bin:/home/edy/.local/bin:/home/edy/go/bin:/home/edy/.cargo/bin:/home/edy/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/snap/bin
++ PROOF_ROOT=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
++ PROOF_CODE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH
++ export FM_HOME=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home HOME=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/user-home FM_SPAWN_NO_GUARD=1
++ FM_HOME=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home
++ HOME=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/user-home
++ FM_SPAWN_NO_GUARD=1
++ /usr/bin/tmux -S /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.priority-1669239.sock -f /dev/null new-session -d -s proof -n fm-ordinary -x 120 -y 40 'while :; do echo progress >> '\''/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/progress'\''; sleep 1; done'
++ printf 'window=proof:fm-ordinary\nbackend=tmux\nkind=ship\nharness=codex\nproject=%s\nworktree=%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project
+++ /usr/bin/tmux -S /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.priority-1669239.sock display-message -p '#{pid}'
++ export TMUX=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.priority-1669239.sock,1669536,0
++ TMUX=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.priority-1669239.sock,1669536,0
++ bash /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-spawn.sh priority-proof-1669239 /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project '/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/fakebin/codex --fixture' --mode no-mistakes --yolo off --priority 0
++ wait_file /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/starts
++ local i
++ (( i=0 ))
++ (( i<300 ))
++ '[' '!' -s /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/starts ']'
++ return 0
++ watch_cycle
++ FM_WATCH_HANDLING_SUCCESSOR=1
++ FM_WATCH_ONCE=1
++ FM_POLL=1
++ FM_CHECK_INTERVAL=999999
++ FM_HEARTBEAT=999999
++ FM_SIGNAL_GRACE=1
++ FM_WORKTREE_CLEANUP=0
++ bash /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-watch.sh
+++ cat /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/watch.out
++ assert_contains 'signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status' priority-proof-1669239.status 'watcher lost the dedicated worker signal'
++ case "$1" in
++ :
++ ack_cycle
++ bash /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-wake-drain.sh
++ local sequence generation
+++ sed -n 's/^WAKE_ACK_REQUIRED:.*--ack-through \([0-9][0-9]*\) --recovery-generation .*/\1/p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/drain.err
++ sequence=2
+++ sed -n 's/^WAKE_ACK_REQUIRED:.*--recovery-generation \([A-Za-z0-9._-]*\)$/\1/p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/drain.err
++ generation=1677041.1794679066.2WfJy8
++ bash /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 1677041.1794679066.2WfJy8
+++ cat /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/drain.out
++ assert_contains '1794679066	2	signal	priority-proof-1669239.status	needs-decision: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status
+wake annotation: latest wake-EVENT observed at drain, not current state: priority-proof-1669239.status: needs-decision [key=local-answer]: where can I find the fixture answer?
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+priority-proof-1669239 [key=local-answer] needs-decision: where can I find the fixture answer?
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '\''<answer>'\''
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.' 'where can I find the fixture answer?' 'wake drain lost the worker question'
++ case "$1" in
++ :
+++ wc -l
++ before=12
++ bash /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-send.sh priority-proof-1669239 'Inspect README.md yourself and complete the dedicated order.'
+WARNING: watcher still down (same stale episode; last beat: 7s ago, grace 300s; down 3s) - full banner already printed this episode.
++ wait_file /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/result
++ local i
++ (( i=0 ))
++ (( i<300 ))
++ '[' '!' -s /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/result ']'
++ return 0
+++ cat /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project/README.md
+++ cat /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/result
++ assert_equals '# project' '# project' 'worker did not execute its order'
++ '[' '# project' = '# project' ']'
++ watch_cycle
++ FM_WATCH_HANDLING_SUCCESSOR=1
++ FM_WATCH_ONCE=1
++ FM_POLL=1
++ FM_CHECK_INTERVAL=999999
++ FM_HEARTBEAT=999999
++ FM_SIGNAL_GRACE=1
++ FM_WORKTREE_CLEANUP=0
++ bash /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-watch.sh
++ . /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-classify-lib.sh
++++ d=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin
++++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin '!=' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-classify-lib.sh ']'
++++ cd /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin
++++ pwd
+++ _FM_CLASSIFY_LIB_DIR=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin
++++ uname -s
+++ _FM_CLASSIFY_UNAME_S=Linux
+++ FM_CREW_STATE_BIN=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-crew-state.sh
+++ case $- in
+++ _fm_classify_nounset=on
+++ . /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-timeout-lib.sh
+++++ d=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin
+++++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin '!=' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-timeout-lib.sh ']'
+++++ CDPATH=
+++++ cd -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin
+++++ pwd
++++ . /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-bash-compat-lib.sh
+++++ fm_bash_compat_apply
+++++ local verdict=unaffected
+++++ fm_bash_heredoc_affected
+++++ local ostype major minor patch
+++++ '[' 0 -ge 4 ']'
+++++ '[' 1 = 1 ']'
+++++ '[' -n '' ']'
+++++ ostype=linux-gnu
+++++ major=5
+++++ minor=2
+++++ patch=21
+++++ case "$ostype" in
+++++ return 1
+++++ '[' 1 = 1 ']'
+++++ '[' -n '' ']'
++++ set -u
+++ '[' on = on ']'
+++ unset _fm_classify_nounset
+++ FM_CLASSIFY_CAPTAIN_RE_DEFAULT='done:|needs-decision:|blocked:|failed:|PR ready|checks green|ready in branch|merged'
+++ FM_CLASSIFY_PAUSED_VERB_DEFAULT=paused
+++ FM_PAUSE_RESURFACE_SECS_DEFAULT=14400
+++ FM_PAUSE_UNDATED_MAX_SECS_DEFAULT=86400
+++ FM_CLASSIFY_RESOLVE_VERB_DEFAULT=resolved
+++ FM_CLASSIFY_CAPTAIN_HELD_VERB_DEFAULT=captain-held
+++ FM_CLASSIFY_EVENT_WINDOW_LINES=200
+++ FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT='pending-reply- claim-refuted-'
+++ FM_OPEN_DECISIONS_FOLD_VERSION=9
+++ FM_STATUS_SNAPSHOT_EVENT_LINE=
+++ FM_STATUS_SNAPSHOT_EVENT_MTIME=
+++ FM_STATUS_SNAPSHOT_EVENT_ENDPOINT=
+++ STATUS_PRESENTATION_REPORTED=
+++ STATUS_PRESENTATION_CLASSIFIED=
+++ _FM_CLASSIFY_KEYLESS_PHASE=$'\036default'
+++ FM_GATE_HUMAN_DECISION='ask-user: authority decision'
+++ FM_WORKTREE_WRITE_PRUNE='.git node_modules .venv venv __pycache__ .mypy_cache .pytest_cache .ruff_cache .tox target dist build .next .cache vendor'
+++ FM_WORKTREE_WRITE_MAXDEPTH=6
+++ FM_WORKTREE_WRITE_TIMEOUT=10
+++ status_open_decisions /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status
+++ local f=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status kind= line resolve held open= verb
+++ '[' -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status ']'
+++ '[' -r /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status ']'
+++ '[' '!' -L /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status ']'
++++ _fm_status_kind /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status ''
++++ local meta=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta kind= line
++++ '[' -z '' ']'
++++ '[' -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta ']'
++++ '[' -r /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta ']'
++++ '[' '!' -L /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta ']'
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ kind=ship
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ '[' -n '' ']'
++++ kind=ship
++++ case "$kind" in
++++ printf %s ship
+++ kind=ship
+++ resolve=resolved
+++ held=captain-held
+++ IFS=
+++ read -r line
+++ status_line_verb 'needs-decision [key=local-answer]: where can I find the fixture answer?' verb
+++ local 'v=needs-decision [key=local-answer]' out= word
+++ v='needs-decision '
+++ v='needs-decision '
+++ v=needs-decision
+++ case "$v" in
+++ out=needs-decision
+++ '[' 2 -gt 1 ']'
+++ printf -v verb %s needs-decision
+++ case "$verb" in
++++ _fm_decision_fold_line '' 'needs-decision [key=local-answer]: where can I find the fixture answer?' resolved captain-held ship
++++ local open= 'line=needs-decision [key=local-answer]: where can I find the fixture answer?' resolve=resolved held=captain-held kind=ship verb key note unstamped
++++ local timed= epoch until old_key old_verb old_epoch old_note
++++ _fm_status_unstamped 'needs-decision [key=local-answer]: where can I find the fixture answer?' unstamped
++++ local '__fm_unstamped_rest=needs-decision [key=local-answer]: where can I find the fixture answer?' __fm_unstamped_keep= __fm_unstamped_before
++++ :
++++ case "$__fm_unstamped_rest" in
++++ break
++++ printf -v unstamped %s 'needs-decision [key=local-answer]: where can I find the fixture answer?'
++++ case "$unstamped" in
++++ status_line_verb 'needs-decision [key=local-answer]: where can I find the fixture answer?' verb
++++ local 'v=needs-decision [key=local-answer]' out= word
++++ v='needs-decision '
++++ v='needs-decision '
++++ v=needs-decision
++++ case "$v" in
++++ out=needs-decision
++++ '[' 2 -gt 1 ']'
++++ printf -v verb %s needs-decision
++++ case "$unstamped" in
++++ case "$verb:$kind" in
++++ case "$verb" in
+++++ _fm_decision_key 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ local k unstamped
+++++ _fm_status_unstamped 'needs-decision [key=local-answer]: where can I find the fixture answer?' unstamped
+++++ local '__fm_unstamped_rest=needs-decision [key=local-answer]: where can I find the fixture answer?' __fm_unstamped_keep= __fm_unstamped_before
+++++ :
+++++ case "$__fm_unstamped_rest" in
+++++ break
+++++ printf -v unstamped %s 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ _fm_key_before_colon 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ case "${1%%:*}" in
+++++ return 0
+++++ k='needs-decision [key=local-answer]'
+++++ k='local-answer]'
+++++ k=local-answer
+++++ _fm_decision_slug_ok local-answer
+++++ case "$1" in
+++++ return 0
+++++ printf %s local-answer
++++ key=local-answer
+++++ status_line_note 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ local n k unstamped
+++++ _fm_status_unstamped 'needs-decision [key=local-answer]: where can I find the fixture answer?' unstamped
+++++ local '__fm_unstamped_rest=needs-decision [key=local-answer]: where can I find the fixture answer?' __fm_unstamped_keep= __fm_unstamped_before
+++++ :
+++++ case "$__fm_unstamped_rest" in
+++++ break
+++++ printf -v unstamped %s 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ case "$unstamped" in
+++++ n=' where can I find the fixture answer?'
+++++ n='where can I find the fixture answer?'
+++++ _fm_key_before_colon 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ case "${1%%:*}" in
+++++ return 0
+++++ printf %s 'where can I find the fixture answer?'
++++ _fm_decision_key_transition_allowed local-answer 'where can I find the fixture answer?'
++++ local key=local-answer 'note=where can I find the fixture answer?' prefix
++++ for prefix in ${FM_CLASSIFY_RESERVED_KEY_PREFIXES:-$FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT}
++++ case "$key" in
++++ for prefix in ${FM_CLASSIFY_RESERVED_KEY_PREFIXES:-$FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT}
++++ case "$key" in
++++ return 0
++++ case "$verb" in
+++++ status_line_note 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ local n k unstamped
+++++ _fm_status_unstamped 'needs-decision [key=local-answer]: where can I find the fixture answer?' unstamped
+++++ local '__fm_unstamped_rest=needs-decision [key=local-answer]: where can I find the fixture answer?' __fm_unstamped_keep= __fm_unstamped_before
+++++ :
+++++ case "$__fm_unstamped_rest" in
+++++ break
+++++ printf -v unstamped %s 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ case "$unstamped" in
+++++ n=' where can I find the fixture answer?'
+++++ n='where can I find the fixture answer?'
+++++ _fm_key_before_colon 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ case "${1%%:*}" in
+++++ return 0
+++++ printf %s 'where can I find the fixture answer?'
++++ note='where can I find the fixture answer?'
++++ '[' '' = timed ']'
++++ '[' '' = timed-all ']'
+++++ _fm_decision_drop '' local-answer
+++++ local set= key=local-answer line out=
+++++ IFS=
+++++ read -r line
+++++ '[' -n '' ']'
+++++ continue
+++++ IFS=
+++++ read -r line
+++++ printf %s ''
++++ open=
++++ '[' -n '' ']'
++++ open='local-answer	needs-decision	where can I find the fixture answer?
+'
++++ printf %s 'local-answer	needs-decision	where can I find the fixture answer?
+'
+++ open='local-answer	needs-decision	where can I find the fixture answer?'
+++ IFS=
+++ read -r line
+++ status_line_verb 'resolved [key=local-answer]: read README.md myself: # project' verb
+++ local 'v=resolved [key=local-answer]' out= word
+++ v='resolved '
+++ v='resolved '
+++ v=resolved
+++ case "$v" in
+++ out=resolved
+++ '[' 2 -gt 1 ']'
+++ printf -v verb %s resolved
+++ case "$verb" in
++++ _fm_decision_fold_line 'local-answer	needs-decision	where can I find the fixture answer?' 'resolved [key=local-answer]: read README.md myself: # project' resolved captain-held ship
++++ local 'open=local-answer	needs-decision	where can I find the fixture answer?' 'line=resolved [key=local-answer]: read README.md myself: # project' resolve=resolved held=captain-held kind=ship verb key note unstamped
++++ local timed= epoch until old_key old_verb old_epoch old_note
++++ _fm_status_unstamped 'resolved [key=local-answer]: read README.md myself: # project' unstamped
++++ local '__fm_unstamped_rest=resolved [key=local-answer]: read README.md myself: # project' __fm_unstamped_keep= __fm_unstamped_before
++++ :
++++ case "$__fm_unstamped_rest" in
++++ break
++++ printf -v unstamped %s 'resolved [key=local-answer]: read README.md myself: # project'
++++ case "$unstamped" in
++++ status_line_verb 'resolved [key=local-answer]: read README.md myself: # project' verb
++++ local 'v=resolved [key=local-answer]' out= word
++++ v='resolved '
++++ v='resolved '
++++ v=resolved
++++ case "$v" in
++++ out=resolved
++++ '[' 2 -gt 1 ']'
++++ printf -v verb %s resolved
++++ case "$unstamped" in
++++ case "$verb:$kind" in
++++ case "$verb" in
+++++ _fm_decision_key 'resolved [key=local-answer]: read README.md myself: # project'
+++++ local k unstamped
+++++ _fm_status_unstamped 'resolved [key=local-answer]: read README.md myself: # project' unstamped
+++++ local '__fm_unstamped_rest=resolved [key=local-answer]: read README.md myself: # project' __fm_unstamped_keep= __fm_unstamped_before
+++++ :
+++++ case "$__fm_unstamped_rest" in
+++++ break
+++++ printf -v unstamped %s 'resolved [key=local-answer]: read README.md myself: # project'
+++++ _fm_key_before_colon 'resolved [key=local-answer]: read README.md myself: # project'
+++++ case "${1%%:*}" in
+++++ return 0
+++++ k='resolved [key=local-answer]'
+++++ k='local-answer]'
+++++ k=local-answer
+++++ _fm_decision_slug_ok local-answer
+++++ case "$1" in
+++++ return 0
+++++ printf %s local-answer
++++ key=local-answer
+++++ status_line_note 'resolved [key=local-answer]: read README.md myself: # project'
+++++ local n k unstamped
+++++ _fm_status_unstamped 'resolved [key=local-answer]: read README.md myself: # project' unstamped
+++++ local '__fm_unstamped_rest=resolved [key=local-answer]: read README.md myself: # project' __fm_unstamped_keep= __fm_unstamped_before
+++++ :
+++++ case "$__fm_unstamped_rest" in
+++++ break
+++++ printf -v unstamped %s 'resolved [key=local-answer]: read README.md myself: # project'
+++++ case "$unstamped" in
+++++ n=' read README.md myself: # project'
+++++ n='read README.md myself: # project'
+++++ _fm_key_before_colon 'resolved [key=local-answer]: read README.md myself: # project'
+++++ case "${1%%:*}" in
+++++ return 0
+++++ printf %s 'read README.md myself: # project'
++++ _fm_decision_key_transition_allowed local-answer 'read README.md myself: # project'
++++ local key=local-answer 'note=read README.md myself: # project' prefix
++++ for prefix in ${FM_CLASSIFY_RESERVED_KEY_PREFIXES:-$FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT}
++++ case "$key" in
++++ for prefix in ${FM_CLASSIFY_RESERVED_KEY_PREFIXES:-$FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT}
++++ case "$key" in
++++ return 0
++++ case "$verb" in
+++++ _fm_decision_drop 'local-answer	needs-decision	where can I find the fixture answer?' local-answer
+++++ local 'set=local-answer	needs-decision	where can I find the fixture answer?' key=local-answer line out=
+++++ IFS=
+++++ read -r line
+++++ '[' -n 'local-answer	needs-decision	where can I find the fixture answer?' ']'
+++++ case "$line" in
+++++ :
+++++ IFS=
+++++ read -r line
+++++ printf %s ''
++++ open=
++++ '[' -n '' ']'
++++ printf %s ''
+++ open=
+++ IFS=
+++ read -r line
+++ status_line_verb 'working: dedicated order completed; ready for continuation' verb
+++ local v=working out= word
+++ v=working
+++ v=working
+++ v=working
+++ case "$v" in
+++ out=working
+++ '[' 2 -gt 1 ']'
+++ printf -v verb %s working
+++ case "$verb" in
+++ IFS=
+++ read -r line
+++ '[' -n '' ']'
+++ printf %s ''
++ assert_equals '' '' 'self-servable decision stayed open'
++ '[' '' = '' ']'
+++ wc -l
++ '[' 18 -gt 12 ']'
++ pass 'dedicated worker processes its order and resolves a self-servable question under continued supervision'
++ printf 'ok - %s\n' 'dedicated worker processes its order and resolves a self-servable question under continued supervision'
+ok - dedicated worker processes its order and resolves a self-servable question under continued supervision
+++ head -1 /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/starts
++ old_pid=1676633
++ cp /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
++ bash /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-control.sh priority-proof-1669239 relaunch --note 'Continue the dedicated order from its completed local answer.'
++ wait_file /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/replacement
++ local i
++ (( i=0 ))
++ (( i<300 ))
++ '[' '!' -s /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/replacement ']'
++ return 0
+++ cat /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/replacement
++ new_pid=1699683
++ '[' 1699683 '!=' 1676633 ']'
++ kill -0 1676633
++ for field in priority worktree project window endpoint_task_id
+++ sed -n 's/^priority=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
+++ sed -n 's/^priority=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
++ assert_equals 0 0 'relaunch changed priority'
++ '[' 0 = 0 ']'
++ for field in priority worktree project window endpoint_task_id
+++ sed -n 's/^worktree=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
+++ sed -n 's/^worktree=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
++ assert_equals /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/worker /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/worker 'relaunch changed worktree'
++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/worker = /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/worker ']'
++ for field in priority worktree project window endpoint_task_id
+++ sed -n 's/^project=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
+++ sed -n 's/^project=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
++ assert_equals /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project 'relaunch changed project'
++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project = /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project ']'
++ for field in priority worktree project window endpoint_task_id
+++ sed -n 's/^window=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
+++ sed -n 's/^window=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
++ assert_equals proof:fm-priority-proof-1669239 proof:fm-priority-proof-1669239 'relaunch changed window'
++ '[' proof:fm-priority-proof-1669239 = proof:fm-priority-proof-1669239 ']'
++ for field in priority worktree project window endpoint_task_id
+++ sed -n 's/^endpoint_task_id=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
+++ sed -n 's/^endpoint_task_id=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
++ assert_equals priority-proof-1669239 priority-proof-1669239 'relaunch changed endpoint_task_id'
++ '[' priority-proof-1669239 = priority-proof-1669239 ']'
++ assert_grep priority=0 /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta 'P0 priority was lost'
++ grep -F -- priority=0 /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
+++ tasks-axi show priority-proof-1669239 --file /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/data/backlog.md
++ row='task:
+  id: priority-proof-1669239
+  title: Synthetic dedicated order
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: 0
+  created: 2026-11-14
+  closed: "-"
+  deps: none
+  links: none
+  body: ""'
++ assert_contains 'task:
+  id: priority-proof-1669239
+  title: Synthetic dedicated order
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: 0
+  created: 2026-11-14
+  closed: "-"
+  deps: none
+  links: none
+  body: ""' 'state: in_flight' 'relaunch lost In-flight ownership'
++ case "$1" in
++ :
++ assert_contains 'task:
+  id: priority-proof-1669239
+  title: Synthetic dedicated order
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: 0
+  created: 2026-11-14
+  closed: "-"
+  deps: none
+  links: none
+  body: ""' 'priority: 0' 'backlog lost P0 priority'
++ case "$1" in
++ :
++ assert_grep phase=complete /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.control-relaunch 'relaunch transaction did not complete'
++ grep -F -- phase=complete /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.control-relaunch
++ pass 'prioritized worker is replaced with priority, endpoint, worktree and In-flight ownership intact'
++ printf 'ok - %s\n' 'prioritized worker is replaced with priority, endpoint, worktree and In-flight ownership intact'
+ok - prioritized worker is replaced with priority, endpoint, worktree and In-flight ownership intact
++ cleanup
++ local rc=0
++ trap - EXIT
++ /usr/bin/tmux -S /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.priority-1669239.sock kill-server
++ fm_test_cleanup
++ local d
++ fm_test_reap_watchers
++ local state lock_home 'seen=
+'
++ '[' -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-watcher.1669239.mk4rmS ']'
++ IFS=
++ read -r state
++ rm -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-watcher.1669239.mk4rmS
++ fm_test_reap_procevent_homes
++ local home claim_root 'seen=
+'
++ '[' -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-procevent.1669239.o6zG72 ']'
++ IFS='	'
++ read -r home claim_root
++ rm -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-procevent.1669239.o6zG72
++ for d in "${FM_TEST_CLEANUP_DIRS[@]:-}"
++ '[' -n '' ']'
++ '[' -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-cleanup.1669239.7GVb9A ']'
++ IFS=
++ read -r d
++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh ']'
++ fm_test_reap_root_processes /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
++ local root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh chain pid pids signal i
++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh ']'
++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh '!=' / ']'
++ chain=' '
++ pid=1669239
++ '[' -n 1669239 ']'
++ '[' 1669239 -gt 1 ']'
++ chain=' 1669239 '
+++ ps -o ppid= -p 1669239
+++ tr -d '[:space:]'
++ pid=1669221
++ '[' -n 1669221 ']'
++ '[' 1669221 -gt 1 ']'
++ chain=' 1669239 1669221 '
+++ ps -o ppid= -p 1669221
+++ tr -d '[:space:]'
++ pid=1635885
++ '[' -n 1635885 ']'
++ '[' 1635885 -gt 1 ']'
++ chain=' 1669239 1669221 1635885 '
+++ ps -o ppid= -p 1635885
+++ tr -d '[:space:]'
++ pid=1635860
++ '[' -n 1635860 ']'
++ '[' 1635860 -gt 1 ']'
++ chain=' 1669239 1669221 1635885 1635860 '
+++ ps -o ppid= -p 1635860
+++ tr -d '[:space:]'
++ pid=1297599
++ '[' -n 1297599 ']'
++ '[' 1297599 -gt 1 ']'
++ chain=' 1669239 1669221 1635885 1635860 1297599 '
+++ ps -o ppid= -p 1297599
+++ tr -d '[:space:]'
++ pid=2566
++ '[' -n 2566 ']'
++ '[' 2566 -gt 1 ']'
++ chain=' 1669239 1669221 1635885 1635860 1297599 2566 '
+++ ps -o ppid= -p 2566
+++ tr -d '[:space:]'
++ pid=1
++ '[' -n 1 ']'
++ '[' 1 -gt 1 ']'
++ for signal in TERM KILL
++ i=0
++ '[' 0 -lt 20 ']'
+++ ps -ww -eo pid=,args=
+++ FM_TEST_REAP_ROOT=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/
+++ awk -v 'chain= 1669239 1669221 1635885 1635860 1297599 2566 ' 'index($0, ENVIRON["FM_TEST_REAP_ROOT"]) && index(chain, " " $1 " ") == 0 { print $1 }'
++ pids=
++ '[' -n '' ']'
++ return 0
++ fm_test_remove_tree /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
++ local dir=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
++ '[' -d /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh ']'
++ '[' '!' -L /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh ']'
++ find /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh -type d -exec chmod u+rwx '{}' +
++ rm -rf /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh
++ IFS=
++ read -r d
++ rm -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/.fm-test-cleanup.1669239.7GVb9A
++ exit 0

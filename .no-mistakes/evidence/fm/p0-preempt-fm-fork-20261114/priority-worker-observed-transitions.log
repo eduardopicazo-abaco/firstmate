@@ -1,0 +1,489 @@
++ assert_contains '1794679066	2	signal	priority-proof-1669239.status	needs-decision: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status
+wake annotation: latest wake-EVENT observed at drain, not current state: priority-proof-1669239.status: needs-decision [key=local-answer]: where can I find the fixture answer?
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+priority-proof-1669239 [key=local-answer] needs-decision: where can I find the fixture answer?
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '\''<answer>'\''
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.' 'where can I find the fixture answer?' 'wake drain lost the worker question'
++ case "$1" in
++ :
+++ wc -l
++ before=12
++ bash /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-send.sh priority-proof-1669239 'Inspect README.md yourself and complete the dedicated order.'
+WARNING: watcher still down (same stale episode; last beat: 7s ago, grace 300s; down 3s) - full banner already printed this episode.
++ wait_file /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/result
++ local i
++ (( i=0 ))
++ (( i<300 ))
++ '[' '!' -s /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/result ']'
++ return 0
+++ cat /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project/README.md
+++ cat /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/result
++ assert_equals '# project' '# project' 'worker did not execute its order'
++ '[' '# project' = '# project' ']'
++ watch_cycle
++ FM_WATCH_HANDLING_SUCCESSOR=1
++ FM_WATCH_ONCE=1
++ FM_POLL=1
++ FM_CHECK_INTERVAL=999999
++ FM_HEARTBEAT=999999
++ FM_SIGNAL_GRACE=1
++ FM_WORKTREE_CLEANUP=0
++ bash /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-watch.sh
++ . /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-classify-lib.sh
++++ d=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin
++++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin '!=' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-classify-lib.sh ']'
++++ cd /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin
++++ pwd
+++ _FM_CLASSIFY_LIB_DIR=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin
++++ uname -s
+++ _FM_CLASSIFY_UNAME_S=Linux
+++ FM_CREW_STATE_BIN=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-crew-state.sh
+++ case $- in
+++ _fm_classify_nounset=on
+++ . /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-timeout-lib.sh
+++++ d=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin
+++++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin '!=' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-timeout-lib.sh ']'
+++++ CDPATH=
+++++ cd -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin
+++++ pwd
++++ . /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-bash-compat-lib.sh
+++++ fm_bash_compat_apply
+++++ local verdict=unaffected
+++++ fm_bash_heredoc_affected
+++++ local ostype major minor patch
+++++ '[' 0 -ge 4 ']'
+++++ '[' 1 = 1 ']'
+++++ '[' -n '' ']'
+++++ ostype=linux-gnu
+++++ major=5
+++++ minor=2
+++++ patch=21
+++++ case "$ostype" in
+++++ return 1
+++++ '[' 1 = 1 ']'
+++++ '[' -n '' ']'
++++ set -u
+++ '[' on = on ']'
+++ unset _fm_classify_nounset
+++ FM_CLASSIFY_CAPTAIN_RE_DEFAULT='done:|needs-decision:|blocked:|failed:|PR ready|checks green|ready in branch|merged'
+++ FM_CLASSIFY_PAUSED_VERB_DEFAULT=paused
+++ FM_PAUSE_RESURFACE_SECS_DEFAULT=14400
+++ FM_PAUSE_UNDATED_MAX_SECS_DEFAULT=86400
+++ FM_CLASSIFY_RESOLVE_VERB_DEFAULT=resolved
+++ FM_CLASSIFY_CAPTAIN_HELD_VERB_DEFAULT=captain-held
+++ FM_CLASSIFY_EVENT_WINDOW_LINES=200
+++ FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT='pending-reply- claim-refuted-'
+++ FM_OPEN_DECISIONS_FOLD_VERSION=9
+++ FM_STATUS_SNAPSHOT_EVENT_LINE=
+++ FM_STATUS_SNAPSHOT_EVENT_MTIME=
+++ FM_STATUS_SNAPSHOT_EVENT_ENDPOINT=
+++ STATUS_PRESENTATION_REPORTED=
+++ STATUS_PRESENTATION_CLASSIFIED=
+++ _FM_CLASSIFY_KEYLESS_PHASE=$'\036default'
+++ FM_GATE_HUMAN_DECISION='ask-user: authority decision'
+++ FM_WORKTREE_WRITE_PRUNE='.git node_modules .venv venv __pycache__ .mypy_cache .pytest_cache .ruff_cache .tox target dist build .next .cache vendor'
+++ FM_WORKTREE_WRITE_MAXDEPTH=6
+++ FM_WORKTREE_WRITE_TIMEOUT=10
+++ status_open_decisions /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status
+++ local f=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status kind= line resolve held open= verb
+++ '[' -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status ']'
+++ '[' -r /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status ']'
+++ '[' '!' -L /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status ']'
++++ _fm_status_kind /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status ''
++++ local meta=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta kind= line
++++ '[' -z '' ']'
++++ '[' -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta ']'
++++ '[' -r /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta ']'
++++ '[' '!' -L /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta ']'
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ kind=ship
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ case "$line" in
++++ IFS=
++++ read -r line
++++ '[' -n '' ']'
++++ kind=ship
++++ case "$kind" in
++++ printf %s ship
+++ kind=ship
+++ resolve=resolved
+++ held=captain-held
+++ IFS=
+++ read -r line
+++ status_line_verb 'needs-decision [key=local-answer]: where can I find the fixture answer?' verb
+++ local 'v=needs-decision [key=local-answer]' out= word
+++ v='needs-decision '
+++ v='needs-decision '
+++ v=needs-decision
+++ case "$v" in
+++ out=needs-decision
+++ '[' 2 -gt 1 ']'
+++ printf -v verb %s needs-decision
+++ case "$verb" in
++++ _fm_decision_fold_line '' 'needs-decision [key=local-answer]: where can I find the fixture answer?' resolved captain-held ship
++++ local open= 'line=needs-decision [key=local-answer]: where can I find the fixture answer?' resolve=resolved held=captain-held kind=ship verb key note unstamped
++++ local timed= epoch until old_key old_verb old_epoch old_note
++++ _fm_status_unstamped 'needs-decision [key=local-answer]: where can I find the fixture answer?' unstamped
++++ local '__fm_unstamped_rest=needs-decision [key=local-answer]: where can I find the fixture answer?' __fm_unstamped_keep= __fm_unstamped_before
++++ :
++++ case "$__fm_unstamped_rest" in
++++ break
++++ printf -v unstamped %s 'needs-decision [key=local-answer]: where can I find the fixture answer?'
++++ case "$unstamped" in
++++ status_line_verb 'needs-decision [key=local-answer]: where can I find the fixture answer?' verb
++++ local 'v=needs-decision [key=local-answer]' out= word
++++ v='needs-decision '
++++ v='needs-decision '
++++ v=needs-decision
++++ case "$v" in
++++ out=needs-decision
++++ '[' 2 -gt 1 ']'
++++ printf -v verb %s needs-decision
++++ case "$unstamped" in
++++ case "$verb:$kind" in
++++ case "$verb" in
+++++ _fm_decision_key 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ local k unstamped
+++++ _fm_status_unstamped 'needs-decision [key=local-answer]: where can I find the fixture answer?' unstamped
+++++ local '__fm_unstamped_rest=needs-decision [key=local-answer]: where can I find the fixture answer?' __fm_unstamped_keep= __fm_unstamped_before
+++++ :
+++++ case "$__fm_unstamped_rest" in
+++++ break
+++++ printf -v unstamped %s 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ _fm_key_before_colon 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ case "${1%%:*}" in
+++++ return 0
+++++ k='needs-decision [key=local-answer]'
+++++ k='local-answer]'
+++++ k=local-answer
+++++ _fm_decision_slug_ok local-answer
+++++ case "$1" in
+++++ return 0
+++++ printf %s local-answer
++++ key=local-answer
+++++ status_line_note 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ local n k unstamped
+++++ _fm_status_unstamped 'needs-decision [key=local-answer]: where can I find the fixture answer?' unstamped
+++++ local '__fm_unstamped_rest=needs-decision [key=local-answer]: where can I find the fixture answer?' __fm_unstamped_keep= __fm_unstamped_before
+++++ :
+++++ case "$__fm_unstamped_rest" in
+++++ break
+++++ printf -v unstamped %s 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ case "$unstamped" in
+++++ n=' where can I find the fixture answer?'
+++++ n='where can I find the fixture answer?'
+++++ _fm_key_before_colon 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ case "${1%%:*}" in
+++++ return 0
+++++ printf %s 'where can I find the fixture answer?'
++++ _fm_decision_key_transition_allowed local-answer 'where can I find the fixture answer?'
++++ local key=local-answer 'note=where can I find the fixture answer?' prefix
++++ for prefix in ${FM_CLASSIFY_RESERVED_KEY_PREFIXES:-$FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT}
++++ case "$key" in
++++ for prefix in ${FM_CLASSIFY_RESERVED_KEY_PREFIXES:-$FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT}
++++ case "$key" in
++++ return 0
++++ case "$verb" in
+++++ status_line_note 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ local n k unstamped
+++++ _fm_status_unstamped 'needs-decision [key=local-answer]: where can I find the fixture answer?' unstamped
+++++ local '__fm_unstamped_rest=needs-decision [key=local-answer]: where can I find the fixture answer?' __fm_unstamped_keep= __fm_unstamped_before
+++++ :
+++++ case "$__fm_unstamped_rest" in
+++++ break
+++++ printf -v unstamped %s 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ case "$unstamped" in
+++++ n=' where can I find the fixture answer?'
+++++ n='where can I find the fixture answer?'
+++++ _fm_key_before_colon 'needs-decision [key=local-answer]: where can I find the fixture answer?'
+++++ case "${1%%:*}" in
+++++ return 0
+++++ printf %s 'where can I find the fixture answer?'
++++ note='where can I find the fixture answer?'
++++ '[' '' = timed ']'
++++ '[' '' = timed-all ']'
+++++ _fm_decision_drop '' local-answer
+++++ local set= key=local-answer line out=
+++++ IFS=
+++++ read -r line
+++++ '[' -n '' ']'
+++++ continue
+++++ IFS=
+++++ read -r line
+++++ printf %s ''
++++ open=
++++ '[' -n '' ']'
++++ open='local-answer	needs-decision	where can I find the fixture answer?
+'
++++ printf %s 'local-answer	needs-decision	where can I find the fixture answer?
+'
+++ open='local-answer	needs-decision	where can I find the fixture answer?'
+++ IFS=
+++ read -r line
+++ status_line_verb 'resolved [key=local-answer]: read README.md myself: # project' verb
+++ local 'v=resolved [key=local-answer]' out= word
+++ v='resolved '
+++ v='resolved '
+++ v=resolved
+++ case "$v" in
+++ out=resolved
+++ '[' 2 -gt 1 ']'
+++ printf -v verb %s resolved
+++ case "$verb" in
++++ _fm_decision_fold_line 'local-answer	needs-decision	where can I find the fixture answer?' 'resolved [key=local-answer]: read README.md myself: # project' resolved captain-held ship
++++ local 'open=local-answer	needs-decision	where can I find the fixture answer?' 'line=resolved [key=local-answer]: read README.md myself: # project' resolve=resolved held=captain-held kind=ship verb key note unstamped
++++ local timed= epoch until old_key old_verb old_epoch old_note
++++ _fm_status_unstamped 'resolved [key=local-answer]: read README.md myself: # project' unstamped
++++ local '__fm_unstamped_rest=resolved [key=local-answer]: read README.md myself: # project' __fm_unstamped_keep= __fm_unstamped_before
++++ :
++++ case "$__fm_unstamped_rest" in
++++ break
++++ printf -v unstamped %s 'resolved [key=local-answer]: read README.md myself: # project'
++++ case "$unstamped" in
++++ status_line_verb 'resolved [key=local-answer]: read README.md myself: # project' verb
++++ local 'v=resolved [key=local-answer]' out= word
++++ v='resolved '
++++ v='resolved '
++++ v=resolved
++++ case "$v" in
++++ out=resolved
++++ '[' 2 -gt 1 ']'
++++ printf -v verb %s resolved
++++ case "$unstamped" in
++++ case "$verb:$kind" in
++++ case "$verb" in
+++++ _fm_decision_key 'resolved [key=local-answer]: read README.md myself: # project'
+++++ local k unstamped
+++++ _fm_status_unstamped 'resolved [key=local-answer]: read README.md myself: # project' unstamped
+++++ local '__fm_unstamped_rest=resolved [key=local-answer]: read README.md myself: # project' __fm_unstamped_keep= __fm_unstamped_before
+++++ :
+++++ case "$__fm_unstamped_rest" in
+++++ break
+++++ printf -v unstamped %s 'resolved [key=local-answer]: read README.md myself: # project'
+++++ _fm_key_before_colon 'resolved [key=local-answer]: read README.md myself: # project'
+++++ case "${1%%:*}" in
+++++ return 0
+++++ k='resolved [key=local-answer]'
+++++ k='local-answer]'
+++++ k=local-answer
+++++ _fm_decision_slug_ok local-answer
+++++ case "$1" in
+++++ return 0
+++++ printf %s local-answer
++++ key=local-answer
+++++ status_line_note 'resolved [key=local-answer]: read README.md myself: # project'
+++++ local n k unstamped
+++++ _fm_status_unstamped 'resolved [key=local-answer]: read README.md myself: # project' unstamped
+++++ local '__fm_unstamped_rest=resolved [key=local-answer]: read README.md myself: # project' __fm_unstamped_keep= __fm_unstamped_before
+++++ :
+++++ case "$__fm_unstamped_rest" in
+++++ break
+++++ printf -v unstamped %s 'resolved [key=local-answer]: read README.md myself: # project'
+++++ case "$unstamped" in
+++++ n=' read README.md myself: # project'
+++++ n='read README.md myself: # project'
+++++ _fm_key_before_colon 'resolved [key=local-answer]: read README.md myself: # project'
+++++ case "${1%%:*}" in
+++++ return 0
+++++ printf %s 'read README.md myself: # project'
++++ _fm_decision_key_transition_allowed local-answer 'read README.md myself: # project'
++++ local key=local-answer 'note=read README.md myself: # project' prefix
++++ for prefix in ${FM_CLASSIFY_RESERVED_KEY_PREFIXES:-$FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT}
++++ case "$key" in
++++ for prefix in ${FM_CLASSIFY_RESERVED_KEY_PREFIXES:-$FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT}
++++ case "$key" in
++++ return 0
++++ case "$verb" in
+++++ _fm_decision_drop 'local-answer	needs-decision	where can I find the fixture answer?' local-answer
+++++ local 'set=local-answer	needs-decision	where can I find the fixture answer?' key=local-answer line out=
+++++ IFS=
+++++ read -r line
+++++ '[' -n 'local-answer	needs-decision	where can I find the fixture answer?' ']'
+++++ case "$line" in
+++++ :
+++++ IFS=
+++++ read -r line
+++++ printf %s ''
++++ open=
++++ '[' -n '' ']'
++++ printf %s ''
+++ open=
+++ IFS=
+++ read -r line
+++ status_line_verb 'working: dedicated order completed; ready for continuation' verb
+++ local v=working out= word
+++ v=working
+++ v=working
+++ v=working
+++ case "$v" in
+++ out=working
+++ '[' 2 -gt 1 ']'
+++ printf -v verb %s working
+++ case "$verb" in
+++ IFS=
+++ read -r line
+++ '[' -n '' ']'
+++ printf %s ''
++ assert_equals '' '' 'self-servable decision stayed open'
++ '[' '' = '' ']'
+++ wc -l
++ '[' 18 -gt 12 ']'
++ pass 'dedicated worker processes its order and resolves a self-servable question under continued supervision'
++ printf 'ok - %s\n' 'dedicated worker processes its order and resolves a self-servable question under continued supervision'
+ok - dedicated worker processes its order and resolves a self-servable question under continued supervision
+++ head -1 /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/starts
++ old_pid=1676633
++ cp /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
++ bash /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/bin/fm-control.sh priority-proof-1669239 relaunch --note 'Continue the dedicated order from its completed local answer.'
++ wait_file /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/replacement
++ local i
++ (( i=0 ))
++ (( i<300 ))
++ '[' '!' -s /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/replacement ']'
++ return 0
+++ cat /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/replacement
++ new_pid=1699683
++ '[' 1699683 '!=' 1676633 ']'
++ kill -0 1676633
++ for field in priority worktree project window endpoint_task_id
+++ sed -n 's/^priority=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
+++ sed -n 's/^priority=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
++ assert_equals 0 0 'relaunch changed priority'
++ '[' 0 = 0 ']'
++ for field in priority worktree project window endpoint_task_id
+++ sed -n 's/^worktree=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
+++ sed -n 's/^worktree=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
++ assert_equals /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/worker /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/worker 'relaunch changed worktree'
++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/worker = /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/worker ']'
++ for field in priority worktree project window endpoint_task_id
+++ sed -n 's/^project=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
+++ sed -n 's/^project=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
++ assert_equals /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project 'relaunch changed project'
++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project = /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/project ']'
++ for field in priority worktree project window endpoint_task_id
+++ sed -n 's/^window=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
+++ sed -n 's/^window=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
++ assert_equals proof:fm-priority-proof-1669239 proof:fm-priority-proof-1669239 'relaunch changed window'
++ '[' proof:fm-priority-proof-1669239 = proof:fm-priority-proof-1669239 ']'
++ for field in priority worktree project window endpoint_task_id
+++ sed -n 's/^endpoint_task_id=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/before.meta
+++ sed -n 's/^endpoint_task_id=//p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
++ assert_equals priority-proof-1669239 priority-proof-1669239 'relaunch changed endpoint_task_id'
++ '[' priority-proof-1669239 = priority-proof-1669239 ']'
++ assert_grep priority=0 /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta 'P0 priority was lost'
++ grep -F -- priority=0 /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.meta
+++ tasks-axi show priority-proof-1669239 --file /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/data/backlog.md
++ row='task:
+  id: priority-proof-1669239
+  title: Synthetic dedicated order
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: 0
+  created: 2026-11-14
+  closed: "-"
+  deps: none
+  links: none
+  body: ""'
++ assert_contains 'task:
+  id: priority-proof-1669239
+  title: Synthetic dedicated order
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: 0
+  created: 2026-11-14
+  closed: "-"
+  deps: none
+  links: none
+  body: ""' 'state: in_flight' 'relaunch lost In-flight ownership'
++ case "$1" in
++ :
++ assert_contains 'task:
+  id: priority-proof-1669239
+  title: Synthetic dedicated order
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: 0
+  created: 2026-11-14
+  closed: "-"
+  deps: none
+  links: none
+  body: ""' 'priority: 0' 'backlog lost P0 priority'
++ case "$1" in
++ :
++ assert_grep phase=complete /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.control-relaunch 'relaunch transaction did not complete'
++ grep -F -- phase=complete /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.control-relaunch
++ pass 'prioritized worker is replaced with priority, endpoint, worktree and In-flight ownership intact'
++ printf 'ok - %s\n' 'prioritized worker is replaced with priority, endpoint, worktree and In-flight ownership intact'
+ok - prioritized worker is replaced with priority, endpoint, worktree and In-flight ownership intact

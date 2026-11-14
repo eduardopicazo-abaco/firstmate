@@ -1,0 +1,6 @@
+1794679066	2	signal	priority-proof-1669239.status	needs-decision: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7DGYPPPCW52Z4A39K9ABKBH/.test-tmp/fm-priority-worker.WEi4Eh/home/state/priority-proof-1669239.status
+wake annotation: latest wake-EVENT observed at drain, not current state: priority-proof-1669239.status: needs-decision [key=local-answer]: where can I find the fixture answer?
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+priority-proof-1669239 [key=local-answer] needs-decision: where can I find the fixture answer?
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.

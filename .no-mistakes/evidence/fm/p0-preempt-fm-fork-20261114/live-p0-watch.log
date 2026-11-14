@@ -1,0 +1,91 @@
+/tmp/fm-lab.2sOcby
+
+=== Two overdue P0 blockers, repeated note and unrelated resolution ===
+stale: primary:fm-p0-a (P0 blocker open for 601s: blocked [key=deploy] [at=1794676797]: missing deploy key)
+stale: primary:fm-p0-b (P0 blocker open for 602s: blocked [at=1794676196]: network route unavailable)
+stale: primary:fm-p0-a (P0 blocker open for 601s: blocked [key=deploy] [at=1794676797]: missing deploy key)
+stale: primary:fm-p0-b (P0 blocker open for 602s: blocked [at=1794676196]: network route unavailable)
+1794676797	1	stale	primary:fm-p0-a	stale: primary:fm-p0-a (P0 blocker open for 601s: blocked [key=deploy] [at=1794676797]: missing deploy key)
+1794676798	2	stale	primary:fm-p0-b	stale: primary:fm-p0-b (P0 blocker open for 602s: blocked [at=1794676196]: network route unavailable)
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+ordinary [key=default] blocked: fresh ordinary sibling signal
+p0-a [key=deploy] blocked: missing deploy key
+p0-b [key=default] blocked: network route unavailable
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+
+=== Re-arm: same episodes must not alarm twice; ordinary signal remains ===
+signal: /tmp/fm-lab.2sOcby/state/ordinary.status /tmp/fm-lab.2sOcby/state/p0-a.status /tmp/fm-lab.2sOcby/state/p0-b.status
+1794676837	6	signal	ordinary.status	signal: /tmp/fm-lab.2sOcby/state/ordinary.status /tmp/fm-lab.2sOcby/state/p0-a.status /tmp/fm-lab.2sOcby/state/p0-b.status
+1794676837	7	signal	p0-a.status	signal: /tmp/fm-lab.2sOcby/state/ordinary.status /tmp/fm-lab.2sOcby/state/p0-a.status /tmp/fm-lab.2sOcby/state/p0-b.status
+1794676837	8	signal	p0-b.status	signal: /tmp/fm-lab.2sOcby/state/ordinary.status /tmp/fm-lab.2sOcby/state/p0-a.status /tmp/fm-lab.2sOcby/state/p0-b.status
+wake annotation: latest wake-EVENT observed at drain, not current state: ordinary.status: blocked [at=1794676797]: fresh ordinary sibling signal
+wake annotation: unread wake-EVENT since last drain, not current state: p0-a.status: blocked [key=deploy] [at=1794676196]: missing deploy key
+wake annotation: unread wake-EVENT since last drain, not current state: p0-a.status: working [at=1794676797]: checking alternate route
+wake annotation: unread wake-EVENT since last drain, not current state: p0-a.status: blocked [key=deploy] [at=1794676797]: missing deploy key
+wake annotation: unread wake-EVENT since last drain, not current state: p0-a.status: resolved [key=other] [at=1794676797]: unrelated answer
+wake annotation: latest wake-EVENT observed at drain, not current state: p0-a.status: working [at=1794676804]: ongoing investigation
+wake annotation: latest wake-EVENT observed at drain, not current state: p0-b.status: blocked [at=1794676196]: network route unavailable
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+ordinary [key=default] blocked: fresh ordinary sibling signal
+p0-a [key=deploy] blocked: missing deploy key
+p0-b [key=default] blocked: network route unavailable
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+
+=== Resolve and reopen: a new episode gets a new alarm ===
+stale: primary:fm-p0-a (P0 blocker open for 645s: blocked [key=deploy] [at=1794676197]: missing deploy key)
+stale: primary:fm-p0-a (P0 blocker open for 645s: blocked [key=deploy] [at=1794676197]: missing deploy key)
+
+=== Existing ordinary lane still running ===
+fm-p0-a 0
+fm-p0-b 0
+fm-ordinary 0
+1794676797
+1794676798
+1794676799
+1794676800
+1794676801
+1794676802
+1794676803
+1794676804
+1794676805
+1794676806
+1794676807
+1794676808
+1794676809
+1794676810
+1794676811
+1794676812
+1794676813
+1794676814
+1794676815
+1794676816
+1794676817
+1794676818
+1794676819
+1794676820
+1794676821
+1794676822
+1794676823
+1794676824
+1794676825
+1794676826
+1794676827
+1794676828
+1794676829
+1794676830
+1794676831
+1794676832
+1794676833
+1794676834
+1794676835
+1794676836
+1794676837
+1794676838
+1794676839
+1794676840
+1794676841
+1794676842
+
+PASS: real watcher alarm, once-only delivery, reopening and parallel lane progress; no backend stubs or fake clock.

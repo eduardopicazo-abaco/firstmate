@@ -1,0 +1,4 @@
+TARGET consumer:
+worktree .agents/skills/afk/SKILL.md
+BASE consumer:
+worktree .agents/skills/afk/SKILL.md
