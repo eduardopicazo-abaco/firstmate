@@ -1,0 +1,64 @@
+Away posture recorded at 2026-11-14T22:27:52Z: hold-for-return only. No phone channel is configured; anything that needs you waits for your return. Your away instructions are recorded verbatim; the away session will carry them out where it can, and anything it is unsure of, or that needs you, waits for your return. Destructive, irreversible, and security-sensitive actions are never pre-authorizable, whatever the words say. Expected return: not given. Spend cap: 1 concurrent workers.
+Away posture (recorded):
+  entered: 2026-11-14T22:27:52Z
+  expected return: not given
+  spend cap: 1 concurrent workers
+  reach: hold-for-return only. No phone channel is configured; anything that needs you waits for your return.
+  your words (verbatim):
+    Continue already authorized synthetic priority work.
+error: spawn refused - the away-posture record caps concurrent workers at 1 and 1 ordinary task(s) are live in this home; task priority-proof-194319 stays queued for the captain's return or for a worker to finish (spend cap: bin/fm-afk-contract.sh)
+warning: /tmp/fm-priority-worker.EWtgve/home/data/priority-proof-194319/launch-brief.md records no ship branch; defaulting to legacy branch fm/priority-proof-194319
+warning: /tmp/fm-priority-worker.EWtgve/home/data/priority-proof-194319/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: task priority-proof-194319 priority mismatch: its backlog row is 0, but this spawn passed --priority 1
+WARNING: watcher still down (same stale episode; last beat: 9s ago, grace 300s; down 3s) - full banner already printed this episode.
+ok - dedicated worker processes its order and resolves a self-servable question under continued supervision
+ok - prioritized worker is replaced with priority, endpoint, worktree and In-flight ownership intact
+warning: /tmp/fm-priority-worker.EWtgve/home/data/priority-proof-194319/launch-brief.md records no ship branch; defaulting to legacy branch fm/priority-proof-194319
+warning: /tmp/fm-priority-worker.EWtgve/home/data/priority-proof-194319/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned priority-proof-194319 harness=codex kind=ship mode=no-mistakes yolo=off window=proof:fm-priority-proof-194319 worktree=/tmp/fm-priority-worker.EWtgve/worker
+warning: /tmp/fm-priority-worker.EWtgve/home/data/priority-proof-194319/launch-brief.md records no ship branch; defaulting to legacy branch fm/priority-proof-194319
+warning: /tmp/fm-priority-worker.EWtgve/home/data/priority-proof-194319/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+relaunched priority-proof-194319 harness=codex from=codex model=default effort=default backend=tmux endpoint=proof:fm-priority-proof-194319 worktree=/tmp/fm-priority-worker.EWtgve/worker
+needs-decision [key=local-answer]: where can I find the fixture answer?
+resolved [key=local-answer]: read README.md myself: # project
+working: dedicated order completed; ready for continuation
+working: replacement resumed the dedicated order
+window=proof:fm-priority-proof-194319
+tmux_socket=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.priority-194319.sock
+tmux_server_pid=194894
+tmux_server_identity=linux-starttime=579660604 cmdline-hex=2f7573722f62696e2f746d7578002d53002f686f6d652f6564792f2e6e6f2d6d697374616b65732f776f726b74726565732f3266633464353632383835372f30314d374531434451394d46563847345a58455a4258513832322f2e7072696f726974792d3139343331392e736f636b002d66002f6465762f6e756c6c006e65772d73657373696f6e002d64002d730070726f6f66002d6e00666d2d6f7264696e617279002d7800313230002d79003430007768696c65203a3b20646f206563686f2070726f6772657373203e3e20272f746d702f666d2d7072696f726974792d776f726b65722e4557746776652f70726f6772657373273b20736c65657020313b20646f6e6500
+tmux_window_id=@1
+endpoint_task_id=priority-proof-194319
+worktree=/tmp/fm-priority-worker.EWtgve/worker
+project=/tmp/fm-priority-worker.EWtgve/project
+harness=codex
+approval_mode=bypass
+kind=ship
+mode=no-mistakes
+yolo=off
+branch=fm/priority-proof-194319
+tasktmp=/tmp/fm-priority-proof-194319
+model=default
+effort=default
+spawn_gen=s1794695303.279432.372
+control_relaunch_tx=258010.20261114T222821Z.19084
+priority=0
+task:
+  id: priority-proof-194319
+  title: Synthetic dedicated order
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: 0
+  created: 2026-11-14
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+Ordinary lane progress ticks: 34

@@ -1,0 +1,30 @@
+
+--- before-deadline real_epoch=1794694993 ---
+signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794694994	1	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794694994	2	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794694994	2	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+wake annotation: latest wake-EVENT observed at drain, not current state: first.status: blocked [key=deploy] [at=1794694413]: original deployment blocker
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=deploy] blocked: original deployment blocker
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 3999653.1794694994.LXC0wg
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  2 task(s) in flight, but no live watcher process holds this home lock (last beat: 4s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  down 2s.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  After draining queued wakes, repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- at-deadline real_epoch=1794695012 ---
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=deploy] blocked: original deployment blocker
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 0 --recovery-generation 4038593.1794695013.05fZ5O
+WARNING: watcher still down (same stale episode; last beat: 2s ago, grace 300s; down 18s) - full banner already printed this episode.
+FAIL missing alarm: P0 blocker open for 600s:

@@ -1,0 +1,75 @@
+Ordinary dispatch at exhausted away cap (exit 1): error: spawn refused - the away-posture record caps concurrent workers at 1 and 1 ordinary task(s) are live in this home; task priority-proof-2686775 stays queued for the captain's return or for a worker to finish (spend cap: bin/fm-afk-contract.sh)
+Mismatched priority (exit 1): warning: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-priority-worker.HoDC0n/home/data/priority-proof-2686775/launch-brief.md records no ship branch; defaulting to legacy branch fm/priority-proof-2686775
+warning: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-priority-worker.HoDC0n/home/data/priority-proof-2686775/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: task priority-proof-2686775 priority mismatch: its backlog row is 0, but this spawn passed --priority 1
+WARNING: watcher still down (same stale episode; last beat: 7s ago, grace 300s; down 3s) - full banner already printed this episode.
+ok - dedicated worker processes its order and resolves a self-servable question under continued supervision
+ok - prioritized worker is replaced with priority, endpoint, worktree and In-flight ownership intact
+
+--- Dedicated worker launch ---
+warning: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-priority-worker.HoDC0n/home/data/priority-proof-2686775/launch-brief.md records no ship branch; defaulting to legacy branch fm/priority-proof-2686775
+warning: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-priority-worker.HoDC0n/home/data/priority-proof-2686775/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned priority-proof-2686775 harness=codex kind=ship mode=no-mistakes yolo=off window=proof:fm-priority-proof-2686775 worktree=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-priority-worker.HoDC0n/worker
+
+--- Self-servable question and resolution ---
+needs-decision [key=local-answer]: where can I find the fixture answer?
+resolved [key=local-answer]: read README.md myself: # project
+working: dedicated order completed; ready for continuation
+working: replacement resumed the dedicated order
+
+--- Preserved ownership after relaunch ---
+window=proof:fm-priority-proof-2686775
+tmux_socket=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.priority-2686775.sock
+tmux_server_pid=2687208
+tmux_server_identity=linux-starttime=579543379 cmdline-hex=2f7573722f62696e2f746d7578002d53002f686f6d652f6564792f2e6e6f2d6d697374616b65732f776f726b74726565732f3266633464353632383835372f30314d374531434451394d46563847345a58455a4258513832322f2e7072696f726974792d323638363737352e736f636b002d66002f6465762f6e756c6c006e65772d73657373696f6e002d64002d730070726f6f66002d6e00666d2d6f7264696e617279002d7800313230002d79003430007768696c65203a3b20646f206563686f2070726f6772657373203e3e20272f686f6d652f6564792f2e6e6f2d6d697374616b65732f776f726b74726565732f3266633464353632383835372f30314d374531434451394d46563847345a58455a4258513832322f2e746573742d746d702f666d2d7072696f726974792d776f726b65722e486f4443306e2f70726f6772657373273b20736c65657020313b20646f6e6500
+tmux_window_id=@1
+endpoint_task_id=priority-proof-2686775
+worktree=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-priority-worker.HoDC0n/worker
+project=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-priority-worker.HoDC0n/project
+harness=codex
+approval_mode=bypass
+kind=ship
+mode=no-mistakes
+yolo=off
+branch=fm/priority-proof-2686775
+tasktmp=/tmp/fm-priority-proof-2686775
+model=default
+effort=default
+spawn_gen=s1794694126.2722661.9095
+control_relaunch_tx=2715303.20261114T220845Z.5670
+priority=0
+task:
+  id: priority-proof-2686775
+  title: Synthetic dedicated order
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: 0
+  created: 2026-11-14
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+
+--- Parallel ordinary lane progress ---
+ordinary lane progress before=14 after=30
+
+--- Actual watcher alarm with a ten-minute-old blocker ---
+stale: proof:fm-priority-proof-2686775 (P0 blocker open for 600s: blocked [key=proof-alarm] [at=1794693529]: fixture requires deployment approval)
+1794694119	4	signal	priority-proof-2686775.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-priority-worker.HoDC0n/home/state/priority-proof-2686775.status
+1794694129	5	stale	proof:fm-priority-proof-2686775	stale: proof:fm-priority-proof-2686775 (P0 blocker open for 600s: blocked [key=proof-alarm] [at=1794693529]: fixture requires deployment approval)
+wake annotation: unread wake-EVENT since last drain, not current state: priority-proof-2686775.status: resolved [key=local-answer]: read README.md myself: # project
+wake annotation: unread wake-EVENT since last drain, not current state: priority-proof-2686775.status: working: dedicated order completed; ready for continuation
+wake annotation: unread wake-EVENT since last drain, not current state: priority-proof-2686775.status: working: replacement resumed the dedicated order
+wake annotation: latest wake-EVENT observed at drain, not current state: priority-proof-2686775.status: blocked [key=proof-alarm] [at=1794693529]: fixture requires deployment approval
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+priority-proof-2686775 [key=proof-alarm] blocked: fixture requires deployment approval
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+Second watcher cycle: no duplicate alarm

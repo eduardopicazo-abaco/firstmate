@@ -1,0 +1,635 @@
++ set -u
+++ dirname tests/fm-watch-triage.test.sh
++ . tests/watch-triage-helpers.sh
+++ set -u
+++ '[' -n '' ']'
+++ FM_WATCH_TRIAGE_HELPERS_SOURCED=1
++++ dirname tests/watch-triage-helpers.sh
+++ . tests/wake-helpers.sh
+++++ dirname tests/wake-helpers.sh
++++ . tests/lib.sh
+++++ '[' -n '' ']'
+++++ FM_TEST_LIB_SOURCED=1
+++++ umask 022
++++++ dirname tests/lib.sh
+++++ . tests/git-config-helpers.sh
++++++ export GIT_CONFIG_GLOBAL=/dev/null GIT_CONFIG_NOSYSTEM=1
++++++ GIT_CONFIG_GLOBAL=/dev/null
++++++ GIT_CONFIG_NOSYSTEM=1
++++++ unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_COMMON_DIR
+++++ export FM_GATE_REFUSE_BYPASS=1
+++++ FM_GATE_REFUSE_BYPASS=1
+++++ export FM_TEST_SEAM=1
+++++ FM_TEST_SEAM=1
+++++ export FM_HEARTBEAT_BIN=true
+++++ FM_HEARTBEAT_BIN=true
+++++ export FM_DISK_ALARM_VOLUME=/nonexistent/fm-test-disk-alarm-volume
+++++ FM_DISK_ALARM_VOLUME=/nonexistent/fm-test-disk-alarm-volume
+++++ unset FM_TASK_ID
+++++ unset TASKS_AXI_FILE TASKS_AXI_BACKEND
+++++ unset REX_SESSION REX_BLOCK
+++++ unset ORCA_TERMINAL_HANDLE
+++++++ dirname tests/lib.sh
++++++ cd tests/..
++++++ pwd
+++++ ROOT=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822
++++++ fm_test_tmpdir
++++++ local base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp physical
++++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp ']'
++++++ case "$base" in
+++++++ CDPATH=
+++++++ cd -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++++++ pwd -P
++++++ physical=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ '[' -e /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.git ']'
++++++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++++ FM_TEST_TMPDIR=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++++ FM_TEST_CLEANUP_DIRS=()
++++++ mktemp /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-cleanup.2488417.XXXXXX
+++++ FM_TEST_CLEANUP_REGISTRY=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-cleanup.2488417.IosxDV
++++++ fm_test_pid_identity 2488417
++++++ local pid=2488417
++++++ FM_STATE_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ bash -c '. "$1"; fm_pid_identity "$2"' _ /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-wake-lib.sh 2488417
+++++ FM_TEST_OWNER_IDENTITY='linux-starttime=579530606 cmdline-hex=62617368002d780074657374732f666d2d77617463682d7472696167652e746573742e736800'
++++++ mktemp /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-procevent.2488417.XXXXXX
+++++ FM_TEST_PROCEVENT_REGISTRY=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-procevent.2488417.vzb8Qa
++++++ mktemp /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-watcher.2488417.XXXXXX
+++++ FM_TEST_WATCHER_REGISTRY=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-watcher.2488417.6QgP0y
+++++ FM_TEST_STUB_MAX_BLOCK_SECONDS=120
+++++ export FM_TEST_STUB_MAX_BLOCK_SECONDS
+++++ FM_TEST_SUITE_PID=2488417
+++++ export FM_TEST_SUITE_PID
+++++ trap fm_test_cleanup EXIT
+++++ trap 'fm_test_cleanup; exit 130' INT
+++++ trap 'fm_test_cleanup; exit 143' TERM
+++++ trap 'fm_test_cleanup; exit 129' HUP
+++++ trap 'fm_test_cleanup; exit 131' QUIT
+++++ FM_TEST_ORPHAN_MAX_AGE_SECONDS=3600
+++++ '[' 0 '!=' 1 ']'
+++++ fm_test_reap_orphans
+++++ local marker dir mtime now owner_pid owner_identity current_identity
++++++ date +%s
+++++ now=1794693972
+++++ for marker in "$FM_TEST_TMPDIR"/fm-*/.fm-test-fixture
+++++ '[' -e /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-priority-worker.YzLUZ5/.fm-test-fixture ']'
++++++ sed -n 1p /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-priority-worker.YzLUZ5/.fm-test-fixture
+++++ owner_pid=2467403
++++++ sed -n '2,$p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-priority-worker.YzLUZ5/.fm-test-fixture
+++++ owner_identity='linux-starttime=579529128 cmdline-hex=626173680074657374732f666d2d7072696f726974792d776f726b65722d6c6976652d6532652e746573742e736800'
+++++ case "$owner_pid" in
++++++ fm_test_pid_identity 2467403
+++++ current_identity='linux-starttime=579529128 cmdline-hex=626173680074657374732f666d2d7072696f726974792d776f726b65722d6c6976652d6532652e746573742e736800'
+++++ '[' -n 'linux-starttime=579529128 cmdline-hex=626173680074657374732f666d2d7072696f726974792d776f726b65722d6c6976652d6532652e746573742e736800' ']'
+++++ '[' 'linux-starttime=579529128 cmdline-hex=626173680074657374732f666d2d7072696f726974792d776f726b65722d6c6976652d6532652e746573742e736800' = 'linux-starttime=579529128 cmdline-hex=626173680074657374732f666d2d7072696f726974792d776f726b65722d6c6976652d6532652e746573742e736800' ']'
+++++ continue
+++++ for marker in "$FM_TEST_TMPDIR"/fm-*/.fm-test-fixture
+++++ '[' -e /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-project-capacity.pfbCjd/.fm-test-fixture ']'
++++++ sed -n 1p /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-project-capacity.pfbCjd/.fm-test-fixture
+++++ owner_pid=2486264
++++++ sed -n '2,$p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-project-capacity.pfbCjd/.fm-test-fixture
+++++ owner_identity='linux-starttime=579530487 cmdline-hex=626173680074657374732f666d2d70726f6a6563742d63617061636974792e746573742e736800'
+++++ case "$owner_pid" in
++++++ fm_test_pid_identity 2486264
+++++ current_identity='linux-starttime=579530487 cmdline-hex=626173680074657374732f666d2d70726f6a6563742d63617061636974792e746573742e736800'
+++++ '[' -n 'linux-starttime=579530487 cmdline-hex=626173680074657374732f666d2d70726f6a6563742d63617061636974792e746573742e736800' ']'
+++++ '[' 'linux-starttime=579530487 cmdline-hex=626173680074657374732f666d2d70726f6a6563742d63617061636974792e746573742e736800' = 'linux-starttime=579530487 cmdline-hex=626173680074657374732f666d2d70726f6a6563742d63617061636974792e746573742e736800' ']'
+++++ continue
++++ '[' -z '' ']'
+++++ fm_test_tmproot fm-wake-tangle-root
+++++ local prefix=fm-wake-tangle-root root tmp_base
++++++ fm_test_tmpdir
++++++ local base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp physical
++++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp ']'
++++++ case "$base" in
+++++++ CDPATH=
+++++++ cd -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++++++ pwd -P
++++++ physical=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ '[' -e /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.git ']'
++++++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++++ tmp_base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++++ tmp_base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ mktemp -d /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.XXXXXX
+++++ root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR
++++++ cd -P -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR
++++++ pwd -P
+++++ root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR
+++++ printf '%s\n%s\n' 2488417 'linux-starttime=579530606 cmdline-hex=62617368002d780074657374732f666d2d77617463682d7472696167652e746573742e736800'
+++++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR
+++++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR
++++ FM_ROOT_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR
++++ export FM_ROOT_OVERRIDE
+++++ fm_test_tmproot fm-wedge-rec
+++++ local prefix=fm-wedge-rec root tmp_base
++++++ fm_test_tmpdir
++++++ local base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp physical
++++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp ']'
++++++ case "$base" in
+++++++ CDPATH=
+++++++ cd -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++++++ pwd -P
++++++ physical=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ '[' -e /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.git ']'
++++++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++++ tmp_base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++++ tmp_base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++++ mktemp -d /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.XXXXXX
+++++ root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx
++++++ cd -P -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx
++++++ pwd -P
+++++ root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx
+++++ printf '%s\n%s\n' 2488417 'linux-starttime=579530606 cmdline-hex=62617368002d780074657374732f666d2d77617463682d7472696167652e746573742e736800'
+++++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx
+++++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx
++++ _fm_wedge_rec_dir=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx
++++ cat
++++ chmod +x /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx/rec
++++ export FM_WEDGE_ALARM_EXEC=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx/rec
++++ FM_WEDGE_ALARM_EXEC=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx/rec
++++ . /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-watch-key-lib.sh
+++ . /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-classify-lib.sh
+++++ d=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin
+++++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin '!=' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-classify-lib.sh ']'
+++++ cd /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin
+++++ pwd
++++ _FM_CLASSIFY_LIB_DIR=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin
+++++ uname -s
++++ _FM_CLASSIFY_UNAME_S=Linux
++++ FM_CREW_STATE_BIN=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-crew-state.sh
++++ case $- in
++++ _fm_classify_nounset=on
++++ . /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-timeout-lib.sh
++++++ d=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin
++++++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin '!=' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-timeout-lib.sh ']'
++++++ CDPATH=
++++++ cd -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin
++++++ pwd
+++++ . /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-bash-compat-lib.sh
++++++ fm_bash_compat_apply
++++++ local verdict=unaffected
++++++ fm_bash_heredoc_affected
++++++ local ostype major minor patch
++++++ '[' 0 -ge 4 ']'
++++++ '[' 1 = 1 ']'
++++++ '[' -n '' ']'
++++++ ostype=linux-gnu
++++++ major=5
++++++ minor=2
++++++ patch=21
++++++ case "$ostype" in
++++++ return 1
++++++ '[' 1 = 1 ']'
++++++ '[' -n '' ']'
+++++ set -u
++++ '[' on = on ']'
++++ unset _fm_classify_nounset
++++ FM_CLASSIFY_CAPTAIN_RE_DEFAULT='done:|needs-decision:|blocked:|failed:|PR ready|checks green|ready in branch|merged'
++++ FM_CLASSIFY_PAUSED_VERB_DEFAULT=paused
++++ FM_PAUSE_RESURFACE_SECS_DEFAULT=14400
++++ FM_PAUSE_UNDATED_MAX_SECS_DEFAULT=86400
++++ FM_CLASSIFY_RESOLVE_VERB_DEFAULT=resolved
++++ FM_CLASSIFY_CAPTAIN_HELD_VERB_DEFAULT=captain-held
++++ FM_CLASSIFY_EVENT_WINDOW_LINES=200
++++ FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT='pending-reply- claim-refuted-'
++++ FM_OPEN_DECISIONS_FOLD_VERSION=10
++++ FM_STATUS_SNAPSHOT_EVENT_LINE=
++++ FM_STATUS_SNAPSHOT_EVENT_MTIME=
++++ FM_STATUS_SNAPSHOT_EVENT_ENDPOINT=
++++ STATUS_PRESENTATION_REPORTED=
++++ STATUS_PRESENTATION_CLASSIFIED=
++++ _FM_CLASSIFY_KEYLESS_PHASE=$'\036default'
++++ FM_GATE_HUMAN_DECISION='ask-user: authority decision'
++++ FM_WORKTREE_WRITE_PRUNE='.git node_modules .venv venv __pycache__ .mypy_cache .pytest_cache .ruff_cache .tox target dist build .next .cache vendor'
++++ FM_WORKTREE_WRITE_MAXDEPTH=6
++++ FM_WORKTREE_WRITE_TIMEOUT=10
+++ WATCH=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-watch.sh
+++ DRAIN=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-wake-drain.sh
++ FM_TRIAGE_WAIT_FLOOR=1200
++ case "$FM_TRIAGE_WAIT_FLOOR" in
+++ declare -f wait_for_exit
+++ tail -n +2
++ eval 'fm_triage_base_wait_for_exit() { 
+    local pid=$1 limit=${2:-50} i=0;
+    while [ "$i" -lt "$limit" ]; do
+        if ! is_live_non_zombie "$pid"; then
+            wait "$pid";
+            return "$?";
+        fi;
+        sleep 0.1;
+        i=$((i + 1));
+    done;
+    printf '\''wait_for_exit: owned pid %s exceeded %s polls; sending TERM\n'\'' "$pid" "$limit" 1>&2;
+    ps -p "$pid" -o pid= -o ppid= -o stat= -o command= 1>&2 2> /dev/null || true;
+    kill -TERM "$pid" 2> /dev/null || true;
+    i=0;
+    while [ "$i" -lt 20 ] && is_live_non_zombie "$pid"; do
+        sleep 0.1;
+        i=$((i + 1));
+    done;
+    if is_live_non_zombie "$pid"; then
+        printf '\''wait_for_exit: owned pid %s survived TERM; sending KILL\n'\'' "$pid" 1>&2;
+        kill -KILL "$pid" 2> /dev/null || true;
+    fi;
+    wait "$pid" 2> /dev/null || true;
+    return 124
+}'
+++ declare -f wait_poll_cycle
+++ tail -n +2
++ eval 'fm_triage_base_wait_poll_cycle() { 
+    local state=$1 pid=$2 limit=${3:-300} beat first now i=0;
+    beat="$state/.last-watcher-beat";
+    rm -f "$beat";
+    first="";
+    while [ "$i" -lt "$limit" ]; do
+        kill -0 "$pid" 2> /dev/null || return 1;
+        first=$(file_mtime "$beat");
+        [ -n "$first" ] && break;
+        sleep 0.1;
+        i=$((i + 1));
+    done;
+    while [ "$i" -lt "$limit" ]; do
+        kill -0 "$pid" 2> /dev/null || return 1;
+        now=$(file_mtime "$beat");
+        if [ -n "$now" ] && [ "$now" != "$first" ]; then
+            return 0;
+        fi;
+        sleep 0.1;
+        i=$((i + 1));
+    done;
+    return 1
+}'
+++ fm_test_tmproot fm-watch-triage-tests
+++ local prefix=fm-watch-triage-tests root tmp_base
++++ fm_test_tmpdir
++++ local base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp physical
++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp ']'
++++ case "$base" in
+++++ CDPATH=
+++++ cd -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++++ pwd -P
++++ physical=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++ base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++ '[' -e /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.git ']'
++++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++ tmp_base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
+++ tmp_base=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp
++++ mktemp -d /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.XXXXXX
+++ root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1
++++ cd -P -- /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1
++++ pwd -P
+++ root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1
+++ printf '%s\n%s\n' 2488417 'linux-starttime=579530606 cmdline-hex=62617368002d780074657374732f666d2d77617463682d7472696167652e746573742e736800'
+++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1
+++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1
++ TMP_ROOT=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1
++ WEDGE_GUARD_CRITICAL='printf "%s\n" "{\"name\":\"ticket\",\"status\":\"CRITICAL\",\"recommendation\":\"ticket 7 is held by a live job\"}"'
++ '[' -n '' ']'
++ '[' -n test_p0_blocker_surfaces_exact_text_once_at_ten_minutes ']'
++ test_p0_blocker_surfaces_exact_text_once_at_ten_minutes
++ local dir state fakebin capture_file window key status_line before_out due_out repeat_out
+++ make_case p0-blocker-ten-minutes
+++ local name=p0-blocker-ten-minutes dir fakebin
+++ dir=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes
+++ fakebin=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/fakebin
+++ mkdir -p /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/fakebin
+++ fm_test_track_watcher_state /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
+++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state ']'
+++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
+++ cat
+++ chmod +x /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/fakebin/tmux
+++ make_fake_crew_state /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/fakebin
+++ local fakebin=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/fakebin
+++ cat
+++ chmod +x /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/fakebin/fm-crew-state.sh
+++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/fakebin/fm-crew-state.sh
+++ printf '%s\n' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes
++ dir=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes
++ state=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
++ fakebin=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/fakebin
++ capture_file=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/pane.txt
++ window=test:fm-p0-worker
++ before_out=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/before.out
++ due_out=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/due.out
++ repeat_out=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/repeat.out
++ status_line='blocked [at=1000]: deployment key is unavailable'
++ mkdir -p /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/config
++ printf 'window=%s\nkind=ship\nharness=codex\npriority=0\n' test:fm-p0-worker
++ printf '%s\n' 'blocked [at=1000]: deployment key is unavailable'
++ prime_status_seen /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/p0-worker.status
++ FM_STATE_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
++ bash -c '
+    . "$1"
+    fm_wake_status_mark_current "$2" "$3"
+  ' _ /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-wake-lib.sh /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/p0-worker.status
++ printf 'rendering before the deadline'
++ PATH=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/fakebin:/home/edy/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/edy/.local/bin:/home/edy/.local/bin:/home/edy/.bun/bin:/home/edy/.config/composer/vendor/bin:/home/edy/.local/share/fnm:/home/edy/.local/bin:/home/edy/bin:/home/edy/.codex/tmp/arg0-linux/codex-arg0DLPoyu:/home/edy/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/edy/.local/bin:/home/edy/.local/bin:/home/edy/.bun/bin:/home/edy/.config/composer/vendor/bin:/home/edy/.local/share/fnm:/home/edy/.local/bin:/home/edy/bin:/home/edy/.local/bin:/home/edy/.grok/bin:/home/edy/.kimi-code/bin:/home/edy/google-cloud-sdk/bin:/home/edy/.bun/bin:/home/edy/.local/bin:/home/edy/go/bin:/home/edy/.cargo/bin:/home/edy/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/snap/bin
++ FM_HOME=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes
++ FM_STATE_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
++ FM_CONFIG_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/config
++ FM_FAKE_TMUX_WINDOW=test:fm-p0-worker
++ FM_FAKE_TMUX_CAPTURE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/pane.txt
++ FM_WATCH_NOW=1599
++ FM_WATCH_HANDLING_SUCCESSOR=1
++ FM_WATCH_ONCE=1
++ FM_POLL=1
++ FM_CHECK_INTERVAL=999999
++ FM_HEARTBEAT=999999
++ /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-watch.sh
++ grep -F 'P0 blocker open' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/before.out
++ status_line='blocked [at=1500]: deployment key is unavailable'
++ printf '%s\n' 'blocked [at=1500]: deployment key is unavailable' 'resolved [key=other] [at=1599]: unrelated answer'
++ prime_status_seen /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/p0-worker.status
++ FM_STATE_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
++ bash -c '
+    . "$1"
+    fm_wake_status_mark_current "$2" "$3"
+  ' _ /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-wake-lib.sh /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/p0-worker.status
++ printf 'rendering at the deadline'
++ PATH=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/fakebin:/home/edy/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/edy/.local/bin:/home/edy/.local/bin:/home/edy/.bun/bin:/home/edy/.config/composer/vendor/bin:/home/edy/.local/share/fnm:/home/edy/.local/bin:/home/edy/bin:/home/edy/.codex/tmp/arg0-linux/codex-arg0DLPoyu:/home/edy/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/edy/.local/bin:/home/edy/.local/bin:/home/edy/.bun/bin:/home/edy/.config/composer/vendor/bin:/home/edy/.local/share/fnm:/home/edy/.local/bin:/home/edy/bin:/home/edy/.local/bin:/home/edy/.grok/bin:/home/edy/.kimi-code/bin:/home/edy/google-cloud-sdk/bin:/home/edy/.bun/bin:/home/edy/.local/bin:/home/edy/go/bin:/home/edy/.cargo/bin:/home/edy/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/snap/bin
++ FM_HOME=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes
++ FM_STATE_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
++ FM_CONFIG_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/config
++ FM_FAKE_TMUX_WINDOW=test:fm-p0-worker
++ FM_FAKE_TMUX_CAPTURE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/pane.txt
++ FM_WATCH_NOW=1600
++ FM_WATCH_HANDLING_SUCCESSOR=1
++ FM_WATCH_ONCE=1
++ FM_POLL=1
++ FM_CHECK_INTERVAL=999999
++ FM_HEARTBEAT=999999
++ /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-watch.sh
++ grep -Fx 'stale: test:fm-p0-worker (P0 blocker open for 600s: blocked [at=1500]: deployment key is unavailable)' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/due.out
+++ watch_window_key test:fm-p0-worker
+++ '[' 1 -eq 1 ']'
+++ window_key test:fm-p0-worker
+++ local key=test_fm-p0-worker
+++ key=test_fm-p0-worker
+++ printf %s test_fm-p0-worker
+++ return
++ key=test_fm-p0-worker
++ assert_present /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/.p0-blocker-surfaced-test_fm-p0-worker 'the P0 alarm left no once-only marker'
++ '[' -e /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/.p0-blocker-surfaced-test_fm-p0-worker ']'
++ ack_stopped_cycle /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
++ local state=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state err sequence generation
++ err=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/.test-cycle-drain.err
++ FM_STATE_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
++ /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-wake-drain.sh
+++ sed -n 's/^WAKE_ACK_REQUIRED:.*--ack-through \([0-9][0-9]*\) --recovery-generation [A-Za-z0-9._-][A-Za-z0-9._-]*$/\1/p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/.test-cycle-drain.err
++ sequence=2
+++ sed -n 's/^WAKE_ACK_REQUIRED:.*--ack-through [0-9][0-9]* --recovery-generation \([A-Za-z0-9._-][A-Za-z0-9._-]*\)$/\1/p' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/.test-cycle-drain.err
++ generation=2493527.1794693974.EXGv1K
++ rm -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/.test-cycle-drain.err
++ '[' -n 2 ']'
++ '[' -n 2493527.1794693974.EXGv1K ']'
++ FM_STATE_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
++ /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 2493527.1794693974.EXGv1K
++ printf '%s\n' 'blocked [at=1650]: deployment key is unavailable'
++ prime_status_seen /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/p0-worker.status
++ FM_STATE_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
++ bash -c '
+    . "$1"
+    fm_wake_status_mark_current "$2" "$3"
+  ' _ /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-wake-lib.sh /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/p0-worker.status
++ printf 'rendering after the deadline'
++ PATH=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/fakebin:/home/edy/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/edy/.local/bin:/home/edy/.local/bin:/home/edy/.bun/bin:/home/edy/.config/composer/vendor/bin:/home/edy/.local/share/fnm:/home/edy/.local/bin:/home/edy/bin:/home/edy/.codex/tmp/arg0-linux/codex-arg0DLPoyu:/home/edy/.local/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/edy/.local/bin:/home/edy/.local/bin:/home/edy/.bun/bin:/home/edy/.config/composer/vendor/bin:/home/edy/.local/share/fnm:/home/edy/.local/bin:/home/edy/bin:/home/edy/.local/bin:/home/edy/.grok/bin:/home/edy/.kimi-code/bin:/home/edy/google-cloud-sdk/bin:/home/edy/.bun/bin:/home/edy/.local/bin:/home/edy/go/bin:/home/edy/.cargo/bin:/home/edy/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/snap/bin
++ FM_HOME=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes
++ FM_STATE_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
++ FM_CONFIG_OVERRIDE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/config
++ FM_FAKE_TMUX_WINDOW=test:fm-p0-worker
++ FM_FAKE_TMUX_CAPTURE=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/pane.txt
++ FM_WATCH_NOW=1700
++ FM_WATCH_HANDLING_SUCCESSOR=1
++ FM_WATCH_ONCE=1
++ FM_POLL=1
++ FM_CHECK_INTERVAL=999999
++ FM_HEARTBEAT=999999
++ /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/bin/fm-watch.sh
++ grep -F 'P0 blocker open' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/repeat.out
++ pass 'a P0 blocker surfaces its exact status text once at the ten-minute bound'
++ printf 'ok - %s\n' 'a P0 blocker surfaces its exact status text once at the ten-minute bound'
+ok - a P0 blocker surfaces its exact status text once at the ten-minute bound
++ exit 0
++ fm_test_cleanup
++ local d
++ fm_test_reap_watchers
++ local state lock_home 'seen=
+'
++ '[' -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-watcher.2488417.6QgP0y ']'
++ IFS=
++ read -r state
++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state ']'
++ case "$seen" in
++ seen+='/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state
+'
++ '[' -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/p0-blocker-ten-minutes/state/.watch.lock/pid ']'
++ continue
++ IFS=
++ read -r state
++ rm -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-watcher.2488417.6QgP0y
++ fm_test_reap_procevent_homes
++ local home claim_root 'seen=
+'
++ '[' -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-procevent.2488417.vzb8Qa ']'
++ IFS='	'
++ read -r home claim_root
++ rm -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-procevent.2488417.vzb8Qa
++ for d in "${FM_TEST_CLEANUP_DIRS[@]:-}"
++ '[' -n '' ']'
++ '[' -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-cleanup.2488417.IosxDV ']'
++ IFS=
++ read -r d
++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR ']'
++ fm_test_reap_root_processes /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR
++ local root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR chain pid pids signal i
++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR ']'
++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR '!=' / ']'
++ chain=' '
++ pid=2488417
++ '[' -n 2488417 ']'
++ '[' 2488417 -gt 1 ']'
++ chain=' 2488417 '
+++ ps -o ppid= -p 2488417
+++ tr -d '[:space:]'
++ pid=2488362
++ '[' -n 2488362 ']'
++ '[' 2488362 -gt 1 ']'
++ chain=' 2488417 2488362 '
+++ ps -o ppid= -p 2488362
+++ tr -d '[:space:]'
++ pid=2420351
++ '[' -n 2420351 ']'
++ '[' 2420351 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 '
+++ ps -o ppid= -p 2420351
+++ tr -d '[:space:]'
++ pid=2420198
++ '[' -n 2420198 ']'
++ '[' 2420198 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 2420198 '
+++ ps -o ppid= -p 2420198
+++ tr -d '[:space:]'
++ pid=1391404
++ '[' -n 1391404 ']'
++ '[' 1391404 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 2420198 1391404 '
+++ ps -o ppid= -p 1391404
+++ tr -d '[:space:]'
++ pid=2566
++ '[' -n 2566 ']'
++ '[' 2566 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 2420198 1391404 2566 '
+++ tr -d '[:space:]'
+++ ps -o ppid= -p 2566
++ pid=1
++ '[' -n 1 ']'
++ '[' 1 -gt 1 ']'
++ for signal in TERM KILL
++ i=0
++ '[' 0 -lt 20 ']'
+++ ps -ww -eo pid=,args=
+++ FM_TEST_REAP_ROOT=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR/
+++ awk -v 'chain= 2488417 2488362 2420351 2420198 1391404 2566 ' 'index($0, ENVIRON["FM_TEST_REAP_ROOT"]) && index(chain, " " $1 " ") == 0 { print $1 }'
++ pids=
++ '[' -n '' ']'
++ return 0
++ fm_test_remove_tree /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR
++ local dir=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR
++ '[' -d /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR ']'
++ '[' '!' -L /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR ']'
++ find /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR -type d -exec chmod u+rwx '{}' +
++ rm -rf /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wake-tangle-root.8E2vaR
++ IFS=
++ read -r d
++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx ']'
++ fm_test_reap_root_processes /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx
++ local root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx chain pid pids signal i
++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx ']'
++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx '!=' / ']'
++ chain=' '
++ pid=2488417
++ '[' -n 2488417 ']'
++ '[' 2488417 -gt 1 ']'
++ chain=' 2488417 '
+++ ps -o ppid= -p 2488417
+++ tr -d '[:space:]'
++ pid=2488362
++ '[' -n 2488362 ']'
++ '[' 2488362 -gt 1 ']'
++ chain=' 2488417 2488362 '
+++ ps -o ppid= -p 2488362
+++ tr -d '[:space:]'
++ pid=2420351
++ '[' -n 2420351 ']'
++ '[' 2420351 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 '
+++ ps -o ppid= -p 2420351
+++ tr -d '[:space:]'
++ pid=2420198
++ '[' -n 2420198 ']'
++ '[' 2420198 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 2420198 '
+++ ps -o ppid= -p 2420198
+++ tr -d '[:space:]'
++ pid=1391404
++ '[' -n 1391404 ']'
++ '[' 1391404 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 2420198 1391404 '
+++ ps -o ppid= -p 1391404
+++ tr -d '[:space:]'
++ pid=2566
++ '[' -n 2566 ']'
++ '[' 2566 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 2420198 1391404 2566 '
+++ ps -o ppid= -p 2566
+++ tr -d '[:space:]'
++ pid=1
++ '[' -n 1 ']'
++ '[' 1 -gt 1 ']'
++ for signal in TERM KILL
++ i=0
++ '[' 0 -lt 20 ']'
+++ ps -ww -eo pid=,args=
+++ FM_TEST_REAP_ROOT=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx/
+++ awk -v 'chain= 2488417 2488362 2420351 2420198 1391404 2566 ' 'index($0, ENVIRON["FM_TEST_REAP_ROOT"]) && index(chain, " " $1 " ") == 0 { print $1 }'
++ pids=
++ '[' -n '' ']'
++ return 0
++ fm_test_remove_tree /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx
++ local dir=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx
++ '[' -d /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx ']'
++ '[' '!' -L /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx ']'
++ find /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx -type d -exec chmod u+rwx '{}' +
++ rm -rf /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-wedge-rec.CS0kcx
++ IFS=
++ read -r d
++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1 ']'
++ fm_test_reap_root_processes /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1
++ local root=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1 chain pid pids signal i
++ '[' -n /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1 ']'
++ '[' /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1 '!=' / ']'
++ chain=' '
++ pid=2488417
++ '[' -n 2488417 ']'
++ '[' 2488417 -gt 1 ']'
++ chain=' 2488417 '
+++ ps -o ppid= -p 2488417
+++ tr -d '[:space:]'
++ pid=2488362
++ '[' -n 2488362 ']'
++ '[' 2488362 -gt 1 ']'
++ chain=' 2488417 2488362 '
+++ ps -o ppid= -p 2488362
+++ tr -d '[:space:]'
++ pid=2420351
++ '[' -n 2420351 ']'
++ '[' 2420351 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 '
+++ ps -o ppid= -p 2420351
+++ tr -d '[:space:]'
++ pid=2420198
++ '[' -n 2420198 ']'
++ '[' 2420198 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 2420198 '
+++ ps -o ppid= -p 2420198
+++ tr -d '[:space:]'
++ pid=1391404
++ '[' -n 1391404 ']'
++ '[' 1391404 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 2420198 1391404 '
+++ ps -o ppid= -p 1391404
+++ tr -d '[:space:]'
++ pid=2566
++ '[' -n 2566 ']'
++ '[' 2566 -gt 1 ']'
++ chain=' 2488417 2488362 2420351 2420198 1391404 2566 '
+++ ps -o ppid= -p 2566
+++ tr -d '[:space:]'
++ pid=1
++ '[' -n 1 ']'
++ '[' 1 -gt 1 ']'
++ for signal in TERM KILL
++ i=0
++ '[' 0 -lt 20 ']'
+++ ps -ww -eo pid=,args=
+++ FM_TEST_REAP_ROOT=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1/
+++ awk -v 'chain= 2488417 2488362 2420351 2420198 1391404 2566 ' 'index($0, ENVIRON["FM_TEST_REAP_ROOT"]) && index(chain, " " $1 " ") == 0 { print $1 }'
++ pids=
++ '[' -n '' ']'
++ return 0
++ fm_test_remove_tree /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1
++ local dir=/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1
++ '[' -d /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1 ']'
++ '[' '!' -L /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1 ']'
++ find /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1 -type d -exec chmod u+rwx '{}' +
++ rm -rf /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/fm-watch-triage-tests.vHfAg1
++ IFS=
++ read -r d
++ rm -f /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/.fm-test-cleanup.2488417.IosxDV

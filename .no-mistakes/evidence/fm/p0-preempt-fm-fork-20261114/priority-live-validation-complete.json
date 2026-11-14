@@ -1,0 +1,85 @@
+{
+  "verdict": "pass",
+  "tested_head_sha": "b6620f751d4902f4f8ae55f2e8a9c95ab136cb93",
+  "scenarios": [
+    {
+      "name": "Dispatch a P0 beyond occupied capacity and the away cap while the ordinary lane continues",
+      "result": "pass",
+      "live": true,
+      "evidence": "priority-admission-product-transcript.log",
+      "provenance": "Carried forward unchanged from previous test phase actual evidence"
+    },
+    {
+      "name": "Attempt ordinary dispatch at the away cap and submit a mismatched priority; both are refused",
+      "result": "pass",
+      "live": true,
+      "evidence": "priority-admission-product-transcript.log",
+      "provenance": "Carried forward unchanged from previous test phase actual evidence"
+    },
+    {
+      "name": "Steer a synthetic dedicated worker through the real inbox to resolve its self-servable question",
+      "result": "pass",
+      "live": true,
+      "evidence": "priority-admission-product-transcript.log",
+      "provenance": "Carried forward unchanged from previous test phase actual evidence"
+    },
+    {
+      "name": "Relaunch a prioritized worker and preserve its priority, worktree, endpoint, and In-flight ownership",
+      "result": "pass",
+      "live": true,
+      "evidence": "priority-admission-product-transcript.log",
+      "provenance": "Carried forward unchanged from previous test phase actual evidence"
+    },
+    {
+      "name": "Run the real watcher against an aged P0 blocker; print and queue its exact text without repeating the alarm",
+      "result": "pass",
+      "live": true,
+      "evidence": "priority-admission-product-transcript.log",
+      "provenance": "Carried forward unchanged from previous test phase actual evidence"
+    },
+    {
+      "name": "Generate the headless supervision prompt with immediate priority dispatch, every-cycle inspection, and existing authority boundaries",
+      "result": "pass",
+      "live": true,
+      "evidence": "emitted-supervision-prompt.txt",
+      "provenance": "Carried forward unchanged from previous test phase actual evidence"
+    },
+    {
+      "name": "Exercise deadline boundaries, multiple blockers, note updates, resolutions, invalid timestamps, and away/quiet alarm delivery",
+      "result": "pass",
+      "live": true,
+      "evidence": "p0-boundary-native-live.log; p0-boundary-native-state.json; emitted-supervision-prompt-boundary-live.txt",
+      "reason": "Actual native scripts with synthetic private task state and real tmux endpoints; actual wall clock, including exactly 600 seconds; no clock substitution. Native away/quiet contract entry, watcher output, durable wake queue, drain and acknowledgment exercised."
+    }
+  ],
+  "source_changes": false,
+  "root_cause": "Prior phase lacked live evidence for the seventh scenario; no product defect reproduced.",
+  "limitations": "Synthetic private workers validate lifecycle and outputs, not vendor model interpretation. One-shot native watcher cycles intentionally end after each observation; resulting watcher-down warnings belong only to the disposable lab. Exact-boundary fixture scheduling attempts are retained separately.",
+  "baseline_findings": "Previously declined baseline stream and seed failures remain unchanged; no waiver inferred.",
+  "artifacts": [
+    {
+      "path": "/home/edy/.no-mistakes/evidence/01M7E1CDQ9MFV8G4ZXEZBXQ822/priority-admission-product-transcript.log",
+      "sha256": "6fc29d6530b201f2adfaa5a36b069b339617c60bb0c290c95a1d0c4ecdb9926c"
+    },
+    {
+      "path": "/home/edy/.no-mistakes/evidence/01M7E1CDQ9MFV8G4ZXEZBXQ822/emitted-supervision-prompt.txt",
+      "sha256": "a124d877f2408626303cfd2ceb5292c186db0f9098856ab27fc9ee3132af9fe2"
+    },
+    {
+      "path": "/home/edy/.no-mistakes/evidence/01M7E1CDQ9MFV8G4ZXEZBXQ822/p0-boundary-native-live.log",
+      "sha256": "0c292166a73511677b5cf1cf44d192f87627f46479ef20b18d6abd0e135eb0b6"
+    },
+    {
+      "path": "/home/edy/.no-mistakes/evidence/01M7E1CDQ9MFV8G4ZXEZBXQ822/p0-boundary-native-state.json",
+      "sha256": "681bff190c541141e8f369eae07e3c38c4b9029b9c1409baa568f2c0910db419"
+    },
+    {
+      "path": "/home/edy/.no-mistakes/evidence/01M7E1CDQ9MFV8G4ZXEZBXQ822/p0-boundary-native-live-driver.sh",
+      "sha256": "e95e80ca90ad066fb46b310ce20b6e019d851da70ddbb6e9f0a8f8b44522161a"
+    },
+    {
+      "path": "/home/edy/.no-mistakes/evidence/01M7E1CDQ9MFV8G4ZXEZBXQ822/emitted-supervision-prompt-boundary-live.txt",
+      "sha256": "a124d877f2408626303cfd2ceb5292c186db0f9098856ab27fc9ee3132af9fe2"
+    }
+  ]
+}

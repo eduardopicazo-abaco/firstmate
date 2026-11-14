@@ -1,0 +1,7 @@
+fm-test-queue: ticket 776, position 1: all 2 slot(s) busy
+fm-test-queue: ticket 776 served
+1..3
+ok - a P0 blocker surfaces its exact status text once at the ten-minute bound
+ok - all due P0 alarms surface before sibling signals, which remain deliverable
+ok - P0 alarms follow open keys, retain opening ages, and retire resolved episodes
+FM_TEST_COMPLETE

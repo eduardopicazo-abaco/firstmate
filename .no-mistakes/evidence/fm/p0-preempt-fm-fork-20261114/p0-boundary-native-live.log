@@ -1,0 +1,238 @@
+
+--- before-deadline real_epoch=1794695024 ---
+signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695025	1	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695026	2	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695026	2	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+wake annotation: latest wake-EVENT observed at drain, not current state: first.status: blocked [key=deploy] [at=1794694444]: original deployment blocker
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=deploy] blocked: original deployment blocker
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 2 --recovery-generation 4057409.1794695025.SPsrVX
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  2 task(s) in flight, but no live watcher process holds this home lock (last beat: 3s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  down 1s.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  After draining queued wakes, repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- at-deadline real_epoch=1794695044 ---
+stale: proof:fm-first (P0 blocker open for 600s: blocked [key=deploy] [at=1794694444]: original deployment blocker)
+1794695044	3	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 600s: blocked [key=deploy] [at=1794694444]: original deployment blocker)
+1794695044	3	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 600s: blocked [key=deploy] [at=1794694444]: original deployment blocker)
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=deploy] blocked: original deployment blocker
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 3 --recovery-generation 4083388.1794695044.sVQRnW
+WARNING: watcher still down (same stale episode; last beat: 2s ago, grace 300s; down 18s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- after-deadline-dedup real_epoch=1794695048 ---
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=deploy] blocked: original deployment blocker
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 0 --recovery-generation 4089757.1794695049.xNz0dm
+WARNING: watcher still down (same stale episode; last beat: 2s ago, grace 300s; down 22s) - full banner already printed this episode.
+
+--- multiple-blockers-note-update real_epoch=1794695052 ---
+stale: proof:fm-first (P0 blocker open for 641s: blocked [key=approval] [at=1794694412]: approval unavailable)
+stale: proof:fm-first (P0 blocker open for 651s: blocked [key=route] [at=1794695052]: updated route note)
+stale: proof:fm-second (P0 blocker open for 611s: blocked [key=second] [at=1794694442]: second worker blocker)
+1794695053	4	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 641s: blocked [key=approval] [at=1794694412]: approval unavailable)
+1794695053	5	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 651s: blocked [key=route] [at=1794695052]: updated route note)
+1794695053	6	stale	proof:fm-second	stale: proof:fm-second (P0 blocker open for 611s: blocked [key=second] [at=1794694442]: second worker blocker)
+1794695053	4	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 641s: blocked [key=approval] [at=1794694412]: approval unavailable)
+1794695053	5	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 651s: blocked [key=route] [at=1794695052]: updated route note)
+1794695053	6	stale	proof:fm-second	stale: proof:fm-second (P0 blocker open for 611s: blocked [key=second] [at=1794694442]: second worker blocker)
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=deploy] blocked: original deployment blocker
+first [key=approval] blocked: approval unavailable
+first [key=route] blocked: updated route note
+second [key=second] blocked: second worker blocker
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 6 --recovery-generation 4095138.1794695053.QVfDMw
+WARNING: watcher still down (same stale episode; last beat: 2s ago, grace 300s; down 27s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- resolved real_epoch=1794695057 ---
+signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/second.status
+1794695058	7	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/second.status
+1794695058	8	signal	second.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/second.status
+1794695058	9	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/second.status
+1794695059	10	signal	second.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/second.status
+1794695058	9	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/second.status
+1794695059	10	signal	second.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/second.status
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: blocked [key=route] [at=1794694402]: route unavailable
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: blocked [key=approval] [at=1794694412]: approval unavailable
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: blocked [key=route] [at=1794695052]: updated route note
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: resolved [key=deploy]: deployment ready
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: resolved [key=route]: route ready
+wake annotation: latest wake-EVENT observed at drain, not current state: first.status: resolved [key=approval]: approved
+wake annotation: unread wake-EVENT since last drain, not current state: second.status: blocked [key=second] [at=1794694442]: second worker blocker
+wake annotation: latest wake-EVENT observed at drain, not current state: second.status: resolved [key=second]: ready
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 10 --recovery-generation 4099165.1794695058.Aw9LjH
+WARNING: watcher still down (same stale episode; last beat: 4s ago, grace 300s; down 32s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- reopened-fresh real_epoch=1794695062 ---
+signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695064	11	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695064	12	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695064	12	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+wake annotation: latest wake-EVENT observed at drain, not current state: first.status: blocked [key=route] [at=1794695062]: reopened route
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=route] blocked: reopened route
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 12 --recovery-generation 4105583.1794695064.znG9r1
+WARNING: watcher still down (same stale episode; last beat: 3s ago, grace 300s; down 37s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- reopened-overdue real_epoch=1794695068 ---
+stale: proof:fm-first (P0 blocker open for 607s: blocked [key=route] [at=1794694461]: reopened aged route)
+1794695068	13	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 607s: blocked [key=route] [at=1794694461]: reopened aged route)
+1794695068	13	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 607s: blocked [key=route] [at=1794694461]: reopened aged route)
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=route] blocked: reopened aged route
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 13 --recovery-generation 4111336.1794695068.umOojI
+WARNING: watcher still down (same stale episode; last beat: 2s ago, grace 300s; down 41s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- invalid-timestamps real_epoch=1794695072 ---
+stale: proof:fm-first (P0 blocker opening timestamp missing or malformed: blocked [key=missing]: timestamp absent)
+stale: proof:fm-first (P0 blocker opening timestamp missing or malformed: blocked [key=malformed] [at=invalid]: timestamp invalid)
+stale: proof:fm-first (P0 blocker opening timestamp is in the future: blocked [key=future] [at=1794698662]: timestamp future)
+1794695072	14	stale	proof:fm-first	stale: proof:fm-first (P0 blocker opening timestamp missing or malformed: blocked [key=missing]: timestamp absent)
+1794695072	15	stale	proof:fm-first	stale: proof:fm-first (P0 blocker opening timestamp missing or malformed: blocked [key=malformed] [at=invalid]: timestamp invalid)
+1794695072	16	stale	proof:fm-first	stale: proof:fm-first (P0 blocker opening timestamp is in the future: blocked [key=future] [at=1794698662]: timestamp future)
+1794695072	14	stale	proof:fm-first	stale: proof:fm-first (P0 blocker opening timestamp missing or malformed: blocked [key=missing]: timestamp absent)
+1794695072	15	stale	proof:fm-first	stale: proof:fm-first (P0 blocker opening timestamp missing or malformed: blocked [key=malformed] [at=invalid]: timestamp invalid)
+1794695072	16	stale	proof:fm-first	stale: proof:fm-first (P0 blocker opening timestamp is in the future: blocked [key=future] [at=1794698662]: timestamp future)
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=missing] blocked: timestamp absent
+first [key=malformed] blocked: timestamp invalid
+first [key=future] blocked: timestamp future
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 16 --recovery-generation 4114276.1794695072.N5IpSS
+WARNING: watcher still down (same stale episode; last beat: 2s ago, grace 300s; down 46s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- invalid-resolved real_epoch=1794695076 ---
+signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695077	17	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695078	18	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695078	18	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: resolved [key=route]: ready again
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: blocked [key=route] [at=1794694461]: reopened aged route
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: resolved [key=route]: ready
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: blocked [key=missing]: timestamp absent
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: blocked [key=malformed] [at=invalid]: timestamp invalid
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: blocked [key=future] [at=1794698662]: timestamp future
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: resolved [key=missing]: fixed
+wake annotation: unread wake-EVENT since last drain, not current state: first.status: resolved [key=malformed]: fixed
+wake annotation: latest wake-EVENT observed at drain, not current state: first.status: resolved [key=future]: fixed
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 18 --recovery-generation 4117223.1794695077.WjsciY
+WARNING: watcher still down (same stale episode; last beat: 4s ago, grace 300s; down 51s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+Away posture recorded at 2026-11-14T22:24:41Z: hold-for-return only. No phone channel is configured; anything that needs you waits for your return. Your away instructions are recorded verbatim; the away session will carry them out where it can, and anything it is unsure of, or that needs you, waits for your return. Destructive, irreversible, and security-sensitive actions are never pre-authorizable, whatever the words say. Expected return: not given. Spend cap: 1 concurrent workers.
+Away posture (recorded):
+  entered: 2026-11-14T22:24:41Z
+  expected return: not given
+  spend cap: 1 concurrent workers
+  reach: hold-for-return only. No phone channel is configured; anything that needs you waits for your return.
+  your words (verbatim):
+    Continue already authorized synthetic priority work.
+away
+
+--- away-alarm-delivery real_epoch=1794695082 ---
+stale: proof:fm-first (P0 blocker open for 601s: blocked [key=away] [at=1794694481]: away delivery blocker)
+1794695082	19	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 601s: blocked [key=away] [at=1794694481]: away delivery blocker)
+1794695082	19	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 601s: blocked [key=away] [at=1794694481]: away delivery blocker)
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=away] blocked: away delivery blocker
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 19 --recovery-generation 4123889.1794695082.OvCw3t
+WARNING: watcher still down (same stale episode; last beat: 2s ago, grace 300s; down 56s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- away-no-duplicate real_epoch=1794695086 ---
+signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695087	20	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695088	21	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695088	21	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+wake annotation: latest wake-EVENT observed at drain, not current state: first.status: blocked [key=away] [at=1794694481]: away delivery blocker
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=away] blocked: away delivery blocker
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 21 --recovery-generation 4127240.1794695088.jKjlPV
+WARNING: watcher still down (same stale episode; last beat: 4s ago, grace 300s; down 61s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- away-resolved real_epoch=1794695091 ---
+signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695093	22	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695093	23	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695093	23	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+wake annotation: latest wake-EVENT observed at drain, not current state: first.status: resolved [key=away]: answered
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 23 --recovery-generation 4133767.1794695093.hLBvD1
+WARNING: watcher still down (same stale episode; last beat: 3s ago, grace 300s; down 67s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/afk-contracts/1794695081.afk-contract
+Quiet mode recorded at 2026-11-14T22:24:57Z: you are present, so nothing waits for your return: every action you ask for, a local landing or a merge included, proceeds now under ordinary attended authority, and quiet mode changes only which updates reach this conversation. Only an explicit /quiet off ends it.
+Quiet mode (recorded):
+  entered: 2026-11-14T22:24:57Z
+  holds: none - you are present, so nothing waits for your return: every action you ask for, a local landing or a merge included, proceeds now under ordinary attended authority, and quiet mode changes only which updates reach this conversation.
+  your words (verbatim):
+    Continue already authorized synthetic priority work.
+quiet
+
+--- quiet-alarm-delivery real_epoch=1794695097 ---
+stale: proof:fm-first (P0 blocker open for 602s: blocked [key=quiet] [at=1794694496]: quiet delivery blocker)
+1794695098	24	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 602s: blocked [key=quiet] [at=1794694496]: quiet delivery blocker)
+1794695098	24	stale	proof:fm-first	stale: proof:fm-first (P0 blocker open for 602s: blocked [key=quiet] [at=1794694496]: quiet delivery blocker)
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=quiet] blocked: quiet delivery blocker
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 24 --recovery-generation 4141629.1794695098.Ev9pRz
+WARNING: watcher still down (same stale episode; last beat: 2s ago, grace 300s; down 71s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- quiet-no-duplicate real_epoch=1794695102 ---
+signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695103	25	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695103	26	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695103	26	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+wake annotation: latest wake-EVENT observed at drain, not current state: first.status: blocked [key=quiet] [at=1794694496]: quiet delivery blocker
+OPEN DECISIONS (still open, folded from the durable status logs - not just the latest line):
+first [key=quiet] blocked: quiet delivery blocker
+OPEN DECISIONS: close one by answering it: bin/fm-send.sh <task> --resolve-key <key> '<answer>'
+OPEN DECISIONS: <key> is the [key=...] printed before the verb; a token inside a note is prose, not a key.
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 26 --recovery-generation 4146038.1794695103.yVlChz
+WARNING: watcher still down (same stale episode; last beat: 5s ago, grace 300s; down 79s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+--- quiet-resolved real_epoch=1794695109 ---
+signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695110	27	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695110	28	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+1794695110	28	signal	first.status	signal: /home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/first.status
+wake annotation: latest wake-EVENT observed at drain, not current state: first.status: resolved [key=quiet]: answered
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 28 --recovery-generation 4170605.1794695110.4n0Vhb
+WARNING: watcher still down (same stale episode; last beat: 4s ago, grace 300s; down 84s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+/home/edy/.no-mistakes/worktrees/2fc4d5628857/01M7E1CDQ9MFV8G4ZXEZBXQ822/.test-tmp/p0-boundary-live/home/state/afk-contracts/1794695097.afk-contract
+
+PASS: native real-clock boundaries, simultaneous blockers, note ages, resolution/reopening, invalid timestamps, away/quiet queue and drain delivery; full prompt captured.
